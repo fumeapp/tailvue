@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { defineProps, PropType, computed } from 'vue'
-import { PushButtonSize, PushButtonState, PushButtonTheme } from 'src/types/push-button'
+import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from '@/types/push-button'
 
 const props = defineProps({
   alwaysClick: Boolean,
   customTheme: Object as PropType<PushButtonTheme>,
-  theme: String as PropType<PushButtonTheme>,
+  theme: String as PropType<PushButtonThemeName>,
   state: {
     type: String as PropType<PushButtonState>,
     default: 'active',
