@@ -16,11 +16,6 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
   },
   "exclude": [
     "dist",

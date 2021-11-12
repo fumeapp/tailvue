@@ -1,4 +1,4 @@
-import { PushButtonTheme, PushButtonThemeName } from 'src/types/push-button'
+import { PushButtonTheme, PushButtonThemeName } from './PushButtonTypes'
 
 export const themes: PushButtonTheme[] = [
   {

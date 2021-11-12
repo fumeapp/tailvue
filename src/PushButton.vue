@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineProps, PropType, computed } from 'vue'
-import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from '@/types/push-button'
-
+import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './PushButtonTypes'
+import { themes } from './PushButtonThemes'
 const props = defineProps({
   alwaysClick: Boolean,
   customTheme: Object as PropType<PushButtonTheme>,
@@ -28,6 +28,26 @@ const sizes: Record<PushButtonSize, string> = {
   [PushButtonSize.Large]: 'px-4 py-2 text-base leading-6',
   [PushButtonSize.Largest]: 'px-6 py-3 text-base leading-6',
 }
+
+const currentTheme = computed((): PushButtonTheme | undefined => {
+
+  if (props.customTheme)
+    return props.customTheme
+
+  if (props.theme)
+    return themes.find(({ name }) => name === props.theme)
+
+  return themes.find(({ name }) => name === PushButtonThemeName.White)
+
+})
+
+const currentThemeClass = computed((): string[]|undefined => {
+  if (currentTheme.value)
+    return [
+      currentTheme.value.primary,
+      isActive.value ? currentTheme.value.active : currentTheme.value.disabled,
+    ]
+})
 
 </script>
 

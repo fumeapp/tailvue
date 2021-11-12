@@ -1,6 +1,5 @@
 <template>
   <div class="w-screen h-screen bg-gray-100 flex items-center justify-center">
-    <span> hello {{ world }} </span>
     <push-button>
       this is a default button
     </push-button>
