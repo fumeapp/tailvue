@@ -1,0 +1,27 @@
+// 20211111213211
+// https://raw.githubusercontent.com/antfu/unplugin-vue-components/main/tsconfig.json
+
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2019",
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "baseUrl": ".",
+  "paths": {
+    "@/*": [ "src/*" ]
+  },
+  "exclude": [
+    "**/dist",
+    "**/node_modules"
+  ]
+}

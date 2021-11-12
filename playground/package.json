@@ -1,0 +1,24 @@
+{
+  "name": "tailvue-playground",
+  "version": "1.0.0",
+  "description": "playground to test tailvue components",
+  "main": "index.js",
+  "repository": "https://github.com/fumeapp/tailvue/playground",
+  "author": "Kevin Olson",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.14"
+  },
+  "dependencies": {
+    "vue": "^3.2.21"
+  }
+}
