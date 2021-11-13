@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, PropType, computed } from 'vue'
+import { PropType, computed } from 'vue'
 import { themes } from './PushButtonThemes'
 import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './PushButtonTypes'
 const emit = defineEmits(['click'])

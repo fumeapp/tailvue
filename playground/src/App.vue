@@ -1,25 +1,31 @@
 <template>
   <div class="w-screen h-screen bg-gray-100 flex flex-col items-center justify-center space-y-4">
+    <div class="i-logos-vue text-3xl" />
+    <div class="i-logos-vue text-3xl bg-red-300 w-8 h-8" />
+    <div class="i-mdi-alarm text-orange-400 w-8 h-8 bg-white" />
     <push-button>
       &lt;push-button&gt;
     </push-button>
     <push-button state="disabled">
-      &lt;push-button state="disabled"&gt;
+      state="disabled"
     </push-button>
     <push-button state="loading">
-      &lt;push-button state="loading"&gt;
+      state="loading"
     </push-button>
     <push-button size="xs">
-      &lt;push-button size="xs"&gt;
+      size="xs"
     </push-button>
     <push-button theme="indigo">
-      &lt;push-button theme="indigo"&gt;
+      theme="indigo"
     </push-button>
     <push-button ping>
-      &lt;push-button ping&gt;
+      ping
     </push-button>
     <push-button ping ping-color="bg-green-500">
-      &lt;push-button ping ping-color="bg-green-500"&gt;
+      ping-color="bg-green-500"
+    </push-button>
+    <push-button theme="white-left">
+      theme="white-left"
     </push-button>
   </div>
 </template>

@@ -1,5 +1,8 @@
+import './index.css'
+import 'uno:icons.css'
+import 'uno.css'
+
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
-createApp(App).mount('#app')
 
+createApp(App).mount('#app')
