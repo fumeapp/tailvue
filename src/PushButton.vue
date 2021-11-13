@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { defineProps, PropType, computed } from 'vue'
-import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './PushButtonTypes'
 import { themes } from './PushButtonThemes'
+import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './PushButtonTypes'
+const emit = defineEmits(['click'])
 const props = defineProps({
   alwaysClick: Boolean,
   customTheme: Object as PropType<PushButtonTheme>,
@@ -17,45 +18,35 @@ const props = defineProps({
   ping: String,
 })
 
-const isActive = computed(() => props.state === PushButtonState.Active)
-const isDisabled = computed(() => props.state === PushButtonState.Disabled)
+const isActive = computed(() => props.state === 'active')
+const isDisabled = computed(() => props.state === 'disabled')
 const cursor = computed(() => isActive.value ? 'cursor-pointer' : isDisabled.value ? 'cursor-not-allowed' : 'cursor-wait')
 
 const sizes: Record<PushButtonSize, string> = {
-  [PushButtonSize.Smallest]: 'px-2.5 py-1.5 text-xs leading-4',
-  [PushButtonSize.Small]: 'px-3 py-2 text-sm leading-4',
-  [PushButtonSize.Medium]: 'px-4 py-2 text-sm leading-5',
-  [PushButtonSize.Large]: 'px-4 py-2 text-base leading-6',
-  [PushButtonSize.Largest]: 'px-6 py-3 text-base leading-6',
+  'xs': 'px-2.5 py-1.5 text-xs leading-4',
+  's': 'px-3 py-2 text-sm leading-4',
+  'm': 'px-4 py-2 text-sm leading-5',
+  'l': 'px-4 py-2 text-base leading-6',
+  'xl': 'px-6 py-3 text-base leading-6',
 }
 
-const currentTheme = computed((): PushButtonTheme | undefined => {
-
-  if (props.customTheme)
-    return props.customTheme
-
-  if (props.theme)
+const currentTheme = computed((): PushButtonTheme|undefined => {
+  if (props.customTheme) return props.customTheme
+  if (props.theme && themes.find(({ name }) => name === props.theme))
     return themes.find(({ name }) => name === props.theme)
-
-  return themes.find(({ name }) => name === PushButtonThemeName.White)
-
+  return themes.find(({ name }) => name === 'white')
 })
 
-const currentThemeClass = computed((): string[]|undefined => {
-  if (currentTheme.value)
-    return [
-      currentTheme.value.primary,
-      isActive.value ? currentTheme.value.active : currentTheme.value.disabled,
-    ]
-})
-
+function click(): void {
+  if (isActive) emit('click')
+}
 </script>
 
 <template>
   <button
       type="button"
       class="relative inline-flex items-center"
-      :class="[ sizes[ size ], cursor, currentThemeClass ]"
+      :class="[sizes[size], currentTheme.primary, currentTheme.dark, cursor, isActive ? currentTheme.active : currentTheme.disabled ]"
       @click="click"
   >
     <slot />

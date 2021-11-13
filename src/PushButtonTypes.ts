@@ -1,28 +1,26 @@
-
 export interface PushButtonTheme {
   name: PushButtonThemeName
   primary: string
   active: string
-  disabled: string
+  dark?: string
+  disabled?: string
 }
-
-export enum PushButtonThemeName {
-  White = 'white',
-  Text = 'text',
-}
-
-export enum PushButtonState {
-  Active = 'active',
-  Loading = 'loading',
-  LoadingQuiet = 'loading-quiet',
-  Disabled = 'disabled',
-}
-
-export enum PushButtonSize {
-  Smallest = 'xs',
-  Small = 's',
-  Medium = 'm',
-  Large = 'l',
-  Largest = 'xl',
-}
-
+export type PushButtonThemes = PushButtonTheme[]
+export type PushButtonThemeName =
+  'white' |
+  'white-left' |
+  'white-mid' |
+  'white-right' |
+  'text' |
+  'dark' |
+  'indigo' |
+  'indigo-light' |
+  'indigo-dark' |
+  'red' |
+  'yellow' |
+  'green' |
+  'blue' |
+  'purple' |
+  'pink'
+export type PushButtonState = 'active'|'loading'|'disabled'
+export type PushButtonSize = 'xs'| 's'| 'm'| 'l'| 'xl'
