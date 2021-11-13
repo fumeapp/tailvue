@@ -15,7 +15,11 @@ const props = defineProps({
     type: String as PropType<PushButtonSize>,
     default: 'm',
   },
-  ping: String,
+  ping: Boolean,
+  pingColor: {
+    type: String,
+    default: 'bg-indigo-500',
+  }
 })
 
 const isActive = computed(() => props.state === 'active')
@@ -57,11 +61,11 @@ function click(): void {
       <span class="flex w-3 h-3 relative">
         <span
             class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-            :class="ping"
+            :class="pingColor"
         />
         <span
             class="relative inline-flex rounded-full h-3 w-3"
-            :class="ping"
+            :class="pingColor"
         />
       </span>
     </span>

@@ -9,8 +9,17 @@
     <push-button state="loading">
       &lt;push-button state="loading"&gt;
     </push-button>
+    <push-button size="xs">
+      &lt;push-button size="xs"&gt;
+    </push-button>
     <push-button theme="indigo">
       &lt;push-button theme="indigo"&gt;
+    </push-button>
+    <push-button ping>
+      &lt;push-button ping&gt;
+    </push-button>
+    <push-button ping ping-color="bg-green-500">
+      &lt;push-button ping ping-color="bg-green-500"&gt;
     </push-button>
   </div>
 </template>
