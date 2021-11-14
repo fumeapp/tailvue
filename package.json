@@ -2,24 +2,46 @@
   "name": "tailvue",
   "version": "1.0.0",
   "description": "tailwind and windicss components for Vue and Nuxt",
-  "main": "index.js",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "vue3",
+    "vue-3",
+    "vue",
+    "vue-plugin",
+    "tailwindcss",
+    "windicss"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/tailvue.umd.js",
+  "module": "./dist/tailvue.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tailvue.es.js",
+      "require": "./dist/tailvue.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite playground",
+    "build": "vite build"
+  },
   "dependencies": {
     "vue": "^3.2.21"
   },
-  "scripts": {
-    "dev": "vite playground"
+  "peerDependencies": {
+    "vue": "^3.2.21"
   },
   "devDependencies": {
     "@iconify/vue": "^3.1.0",
+    "@types/node": "^16.11.7",
     "@vitejs/plugin-vue": "^1.9.4",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.19",
-    "vite": "^2.6.14",
-    "vue-ray": "^1.17.3"
+    "vite": "^2.6.14"
   }
 }

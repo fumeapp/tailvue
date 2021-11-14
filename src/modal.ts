@@ -1,6 +1,6 @@
-import GlobalModal from './GlobalModal.vue'
 import { spawn } from './utils'
 import { ModalProps } from './ModalTypes'
+import GlobalModal from './GlobalModal.vue'
 
 export function useModal () {
   const modals = document.createElement('div')
