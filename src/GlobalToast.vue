@@ -24,9 +24,7 @@
                 <p :class="{'mt-1': title}" class="text-sm leading-5" v-html="message"></p>
               </div>
               <div class="ml-4 flex-shrink-0 flex">
-                <button class="inline-flex text-gray-400 transition ease-in-out duration-150 focus:outline-none focus:text-gray-500" @click="destroy">
-                  <Icon icon="mdi-close-thick" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                </button>
+                <global-toast-close  @close="destroy(true)"/>
               </div>
             </div>
           </div>
@@ -81,7 +79,7 @@
               </div>
               <div class="ml-4 flex-shrink-0 flex">
                 <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" @click="destroy">
-                  <Icon icon="mdi-close-thick" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <global-toast-close  @close="destroy(true)"/>
                 </button>
               </div>
             </div>
@@ -98,6 +96,7 @@ import { removeElement } from './utils'
 import { ToastAction, ToastType } from './ToastTypes'
 import { computed, getCurrentInstance, onMounted, PropType, ref } from 'vue'
 import GlobalToastIcons from './GlobalToastIcons.vue'
+import GlobalToastClose from './GlobalToastClose.vue'
 const props = defineProps({
   title: String,
   message: {
@@ -151,12 +150,17 @@ function updateTime() {
   if (timeLeft.value === 0) destroy()
 }
 
-function destroy  () {
-  setTimeout(() => active.value = false, 100)
+function destroy  (instant = false) {
   clearInterval(interval)
-  // removeElement(toastRef?.value)
-  setTimeout(() => removeElement(toastRef?.value), 200)
-  setTimeout(() => instance?.appContext.app.unmount(), 300)
+  if (instant) {
+    active.value = false
+    setTimeout(() => removeElement(toastRef?.value), 100)
+    setTimeout(() => instance?.appContext.app.unmount(), 100)
+  } else {
+    setTimeout(() => active.value = false, 100)
+    setTimeout(() => removeElement(toastRef?.value), 200)
+    setTimeout(() => instance?.appContext.app.unmount(), 200)
+  }
 }
 
 function primaryAction () {
