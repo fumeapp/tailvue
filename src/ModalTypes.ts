@@ -8,7 +8,7 @@ export interface ModalButton {
   action: Function
 }
 
-export interface GlobalModalProps {
+export interface ModalProps {
   type?: ModalType
   title: string
   body?: string

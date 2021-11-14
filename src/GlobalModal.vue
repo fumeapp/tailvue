@@ -83,10 +83,6 @@ onMounted(() => {
   }, 200)
 })
 
-async function focus(index = 0) {
-  document?.getElementById(`modal-button-${index}`)?.focus()
-}
-
 async function action (type: 'primary'|'secondary') {
   if (modalBaseRef) {
     modalBaseRef?.value?.destroy()

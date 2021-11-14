@@ -28,7 +28,7 @@ function danger() {
     body: 'This is the body property.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam.',
     primary: {
       label: 'Primary Action',
-      theme: 'blue',
+      theme: 'red',
       action: () => console.log('Primary Button clicked'),
     },
     secondary: {
