@@ -14,8 +14,10 @@ import PushButton from '../../src/PushButton.vue'
 import ModalBase from '../../src/ModalBase.vue'
 import { ref } from 'vue'
 import { useModal } from '../../src/modal'
+import { useToast } from '../../src/toast'
 const modal = ref(false)
 const $modal = useModal()
+const $toast = useToast()
 
 function test() {
   $modal.show('this is a test')
@@ -29,12 +31,12 @@ function danger() {
     primary: {
       label: 'Primary Action',
       theme: 'red',
-      action: () => console.log('Primary Button clicked'),
+      action: () => $toast.show('Primary Button clicked'),
     },
     secondary: {
       label: 'Secondary Action',
       theme: 'white',
-      action: () => console.log('Clicked Secondary'),
+      action: () => $toast.show('Clicked Secondary'),
     },
   })
 }

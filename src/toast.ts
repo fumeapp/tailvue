@@ -3,13 +3,16 @@ import { ToastProps } from './ToastTypes'
 import { spawn } from './utils'
 
 const outerClasses = [
-  'z-40', 'fixed',  'inset-0', 'flex',  'items-end',
-  'px-4', 'py-6',  'pointer-events-none',  'sm:p-6', 'sm:items-start',
+  'z-40', 'fixed',  'inset-0', 'flex',  'sm:items-start',
+  'px-4', 'py-6',  'pointer-events-none',  'sm:p-6',
 ]
 
-const innerClasses = [ 'w-full', 'flex', 'flex-col', 'items-center', 'space-y-4',  'sm:items-end', ]
+const innerClasses = [
+  'w-full', 'flex', 'flex-col-reverse',
+  'items-center', 'sm:items-end', 'sm:justify-end',
+]
 
-const elClasses = ['w-full', 'max-w-sm']
+const elClasses = ['w-full', 'max-w-sm', 'mt-4']
 
 export function useToast() {
   const outer = document.createElement('div')
