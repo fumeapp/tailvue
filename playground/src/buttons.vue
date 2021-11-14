@@ -20,9 +20,11 @@
   <push-button ping ping-color="bg-green-500">
     ping-color="bg-green-500"
   </push-button>
-  <push-button theme="white-left">
-    theme="white-left"
-  </push-button>
+  <div>
+    <push-button theme="white-left"> theme="white-left" </push-button>
+    <push-button theme="white-mid"> white-mid </push-button>
+    <push-button theme="white-right"> white-right </push-button>
+  </div>
 </template>
 <script lang="ts" setup>
 import PushButton from '../../src/PushButton.vue'

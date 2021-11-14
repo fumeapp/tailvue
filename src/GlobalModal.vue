@@ -5,7 +5,7 @@
         :class="typeColors[type]"
         class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10">
         <Icon icon="mdi-check" v-if="type === 'success'" class="h-5 w-5 text-green-500" />
-        <Icon icon="mdi-information" v-if="type === 'info'" class="h-5 w-5 text-blue-500" />
+        <Icon icon="bi-info-lg" v-if="type === 'info'" class="h-5 w-5 text-blue-500" />
         <Icon icon="mdi-exclamation-thick" v-if="type === 'danger'" class="h-5 w-5 text-red-500" />
         <Icon icon="mdi-exclamation-thick" v-if="type === 'warning'" class="h-5 w-5 text-yellow-500" />
       </div>
@@ -38,7 +38,7 @@
   </modal-base>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup="{ ray }">
 import { Icon } from '@iconify/vue'
 import { removeElement } from './utils'
 import ModalBase from './ModalBase.vue'
@@ -68,7 +68,7 @@ const props = defineProps({
 
 const active = ref(false)
 const primaryRef = ref<null|Object & { $el: HTMLButtonElement }>(null)
-const modalBaseRef = ref<null|Object & { destroy: Function, $el: HTMLElement }>(null)
+const modalBaseRef = ref<InstanceType<typeof ModalBase>|null>(null)
 const typeColors:Record<ModalType, string> = {
   success: 'bg-green-100 dark:bg-green-900',
   info: 'bg-blue-100 dark:bg-blue-900',
@@ -89,7 +89,6 @@ async function focus(index = 0) {
 
 async function action (type: 'primary'|'secondary') {
   if (modalBaseRef) {
-    console.log(modalBaseRef.value)
     modalBaseRef?.value?.destroy()
   }
   if (type === 'primary' && props.primary)
