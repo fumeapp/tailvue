@@ -1,9 +1,10 @@
+import { PushButtonThemeName } from './PushButtonTypes'
+
 export type ModalType = 'success'|'info'|'danger'|'warning'
-export type ModalButtonTheme = 'red'|'white'
 
 export interface ModalButton {
   label: string
-  theme: ModalButtonTheme
+  theme: PushButtonThemeName
   action: Function
 }
 

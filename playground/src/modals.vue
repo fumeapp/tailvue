@@ -28,11 +28,11 @@ function danger() {
     body: 'This is the body property.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam.',
     primary: {
       label: 'Primary Action',
-      theme: 'red',
+      theme: 'blue',
       action: () => console.log('Primary Button clicked'),
     },
     secondary: {
-      label: 'Secondary Button',
+      label: 'Secondary Action',
       theme: 'white',
       action: () => console.log('Clicked Secondary'),
     },
