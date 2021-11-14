@@ -6,15 +6,13 @@
       enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
       enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
       leave-active-class="transform ease-in duration-100 transition"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0">
+      leave-from-class="translate-y-0 opacity-100 sm:translate-y-0 sm:translate-x-0"
+      leave-to-class="translate-y-1 opacity-0 sm:translate-y-0 sm:translate-x-1"
+    >
       <div
         v-if="active && !primary"
         class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
-        <div
-          v-if="progress && timeout"
-          class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-200 dark:bg-gray-700"
-          :style="progressStyle" />
+        <div v-if="progress && timeout" class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-200 dark:bg-gray-700" :style="progressStyle" />
         <div class="rounded-lg shadow-xs overflow-hidden z-100">
           <div class="p-4">
             <div class="flex items-start">
@@ -27,14 +25,14 @@
               </div>
               <div class="ml-4 flex-shrink-0 flex">
                 <button class="inline-flex text-gray-400 transition ease-in-out duration-150 focus:outline-none focus:text-gray-500" @click="destroy">
-                  <Icon icon="mdi-close" class="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <Icon icon="mdi-close-thick" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div v-else-if="active && primary && secondary" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
+      <div v-else-if="active && primary && secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
         <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900" :style="progressStyle"></div>
         <div class="flex rounded-lg shadow-xs">
           <div class="w-0 flex-1 flex items-center p-4">
@@ -66,7 +64,7 @@
           </div>
         </div>
       </div>
-      <div v-else-if="active && primary && !secondary" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
+      <div v-else-if="active && primary && !secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
         <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900"  :style="progressStyle"></div>
         <div class="rounded-lg shadow-xs overflow-hidden">
           <div class="p-4">
@@ -83,7 +81,7 @@
               </div>
               <div class="ml-4 flex-shrink-0 flex">
                 <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" @click="destroy">
-                  <Icon icon="mdi-close" class="w-6 h-6 text-gray-200 dark:text-gray-400" />
+                  <Icon icon="mdi-close-thick" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 </button>
               </div>
             </div>
@@ -154,10 +152,11 @@ function updateTime() {
 }
 
 function destroy  () {
-  active.value = false
+  setTimeout(() => active.value = false, 100)
   clearInterval(interval)
-  // setTimeout(() => instance?.appContext.app.unmount(), 300)
-  setTimeout(() => removeElement(toastRef?.value), 400)
+  // removeElement(toastRef?.value)
+  setTimeout(() => removeElement(toastRef?.value), 200)
+  setTimeout(() => instance?.appContext.app.unmount(), 300)
 }
 
 function primaryAction () {
