@@ -1,4 +1,3 @@
-import { DefineComponent } from 'vue'
 export interface PushButtonTheme {
   name: PushButtonThemeName
   primary: string
