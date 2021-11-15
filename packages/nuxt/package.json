@@ -1,0 +1,52 @@
+{
+  "name": "@tailvue/nuxt",
+  "version": "0.1.20",
+  "description": "Nuxt module for tailvue",
+  "keywords": [
+    "tailvue",
+    "vue3",
+    "vue-3",
+    "vue",
+    "vue-plugin",
+    "tailwindcss",
+    "windicss",
+    "nuxt-module",
+    "nuxt",
+    "nuxt3"
+  ],
+  "homepage": "https://github.com/fumeapp/tailvue#readme",
+  "bugs": {
+    "url": "https://github.com/fumeapp/tailvue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fumeapp/tailvue.git",
+    "directory": "packages/nuxt"
+  },
+  "license": "MIT",
+  "author": "Kevin Olson <acidjazz@gmail.com>",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "tailvue": "^0.1.20"
+  },
+  "devDependencies": {
+    "tsup": "^5.7.0",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@nuxt/types": "^2.15.8"
+  }
+}
