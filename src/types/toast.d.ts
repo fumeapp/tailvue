@@ -16,3 +16,12 @@ export interface ToastProps {
   primary?: ToastAction
   secondary?: ToastAction
 }
+
+export interface TailvueToast {
+  show(props: ToastProps): void
+  success(message: string): void
+  info(message: string): void
+  danger(message: string): void
+  warning(message: string): void
+  denied(message: string): void
+}
