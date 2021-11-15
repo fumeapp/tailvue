@@ -10,4 +10,4 @@ const install:Plugin = (app: App) => {
 }
 
 export { PushButton, ModalBase, useModal, useToast, install }
-
+export default install

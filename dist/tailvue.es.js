@@ -2807,4 +2807,4 @@ const install = (app) => {
   app.component("PushButton", _sfc_main$5);
   app.component("ModalBase", _sfc_main$4);
 };
-export { _sfc_main$4 as ModalBase, _sfc_main$5 as PushButton, install, useModal, useToast };
+export { _sfc_main$4 as ModalBase, _sfc_main$5 as PushButton, install as default, install, useModal, useToast };
