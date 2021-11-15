@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^3.1.0",
+    "@nuxt/kit": "^0.7.0-edge",
     "@types/node": "^16.11.7",
     "@vitejs/plugin-vue": "^1.9.4",
     "autoprefixer": "^10.4.0",
