@@ -1,6 +1,6 @@
 {
   "name": "tailvue",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "tailwind and windicss components for Vue and Nuxt",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
