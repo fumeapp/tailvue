@@ -1,6 +1,6 @@
 <template>
   <modal-base ref="modalBaseRef" :active="active" :destroyed="destroy">
-    <div class="sm:flex sm:items-center">
+    <div class="sm:flex sm:items-start">
       <div
         :class="typeColors[type]"
         class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10">
