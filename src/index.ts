@@ -9,10 +9,5 @@ const install:Plugin = (app: App) => {
   app.component('ModalBase', ModalBase)
 }
 
-export default class Tailvue {
-  static install = install
-  PushButton = PushButton
-  ModalBase = ModalBase
-  useModal = useModal
-  useToast = useToast
-}
+export { PushButton, ModalBase, useModal, useToast, install }
+
