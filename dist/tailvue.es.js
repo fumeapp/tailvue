@@ -2268,7 +2268,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$3 = { class: "sm:flex sm:items-center" };
+const _hoisted_1$3 = { class: "sm:flex sm:items-start" };
 const _hoisted_2$3 = { class: "mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left" };
 const _hoisted_3$2 = {
   key: 0,
@@ -2803,4 +2803,8 @@ function useToast() {
     }
   };
 }
-export { _sfc_main$4 as ModalBase, _sfc_main$5 as PushButton, useModal, useToast };
+const install = (app) => {
+  app.component("PushButton", _sfc_main$5);
+  app.component("ModalBase", _sfc_main$4);
+};
+export { _sfc_main$4 as ModalBase, _sfc_main$5 as PushButton, install, useModal, useToast };
