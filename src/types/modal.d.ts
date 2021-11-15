@@ -16,6 +16,6 @@ export interface ModalProps {
   secondary?: ModalButton
 }
 
-export interface TailVueModal {
+export interface TailvueModal {
   show(props: ModalProps|string): void
 }
