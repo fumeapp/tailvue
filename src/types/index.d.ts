@@ -1,4 +1,3 @@
-import { PushButton } from '@/index'
 import { DefineComponent } from 'vue'
 
 export * from './modal'
