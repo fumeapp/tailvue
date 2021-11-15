@@ -93,10 +93,10 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
 import { removeElement } from './utils'
-import { ToastAction, ToastType } from './ToastTypes'
 import { computed, getCurrentInstance, onMounted, PropType, ref } from 'vue'
 import GlobalToastIcons from './GlobalToastIcons.vue'
 import GlobalToastClose from './GlobalToastClose.vue'
+import { ToastAction, ToastType } from '@/types/toast'
 const props = defineProps({
   title: String,
   message: {

@@ -18,8 +18,8 @@
 
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
-import { ToastType } from './ToastTypes'
 import { PropType } from 'vue'
+import { ToastType } from '@/types/toast'
 const props = defineProps({
   type: String as PropType<ToastType>,
 })

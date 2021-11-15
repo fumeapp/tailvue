@@ -1,6 +1,7 @@
 import GlobalToast from './GlobalToast.vue'
-import { ToastProps } from './ToastTypes'
 import { spawn } from './utils'
+import { ToastProps } from '@/types/toast'
+import { ComponentOptionsWithObjectProps } from 'vue'
 
 const outerClasses = [
   'z-40', 'fixed',  'inset-0', 'flex',  'sm:items-start',
@@ -27,22 +28,22 @@ export function useToast() {
   return {
     show (props: ToastProps|string) {
       if (typeof props === 'string') props = { message: props }
-      return spawn('toasts', props, GlobalToast, elClasses)
+      return spawn('toasts', props, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     success (message: string) {
-      return spawn('toasts', {type: 'success', message}, GlobalToast, elClasses)
+      return spawn('toasts', {type: 'success', message}, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     info (message: string) {
-      return spawn('toasts', {type: 'info', message}, GlobalToast, elClasses)
+      return spawn('toasts', {type: 'info', message}, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     danger (message: string) {
-      return spawn('toasts', {type: 'danger', message, timeout: 20}, GlobalToast, elClasses)
+      return spawn('toasts', {type: 'danger', message, timeout: 20}, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     warning (message: string) {
-      return spawn('toasts', {type: 'warning', message, timeout: 10}, GlobalToast, elClasses)
+      return spawn('toasts', {type: 'warning', message, timeout: 10}, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     denied (message: string) {
-      return spawn('toasts', {type: 'denied', message, timeout: 10}, GlobalToast, elClasses)
+      return spawn('toasts', {type: 'denied', message, timeout: 10}, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
   }
 

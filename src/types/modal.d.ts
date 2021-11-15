@@ -1,5 +1,3 @@
-import { PushButtonThemeName } from './PushButtonTypes'
-
 export type ModalType = 'success'|'info'|'danger'|'warning'
 
 export interface ModalButton {

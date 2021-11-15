@@ -25,6 +25,7 @@
       "require": "./dist/tailvue.umd.js"
     }
   },
+  "types": "src/types/*",
   "scripts": {
     "dev": "vite playground",
     "build": "vite build"

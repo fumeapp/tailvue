@@ -1,6 +1,6 @@
 import { ComponentOptionsWithObjectProps, createApp, defineComponent } from 'vue'
-import { ModalProps } from './ModalTypes'
-import { ToastProps } from './ToastTypes'
+import { ToastProps } from '@/types/toast'
+import { ModalProps } from '@/types/modal'
 
 export function removeElement (el: HTMLElement|undefined) {
   if (!el) return

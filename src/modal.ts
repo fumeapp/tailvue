@@ -1,6 +1,7 @@
 import { spawn } from './utils'
-import { ModalProps } from './ModalTypes'
 import GlobalModal from './GlobalModal.vue'
+import { ModalProps } from '@/types/modal'
+import { ComponentOptionsWithObjectProps } from 'vue'
 
 export function useModal () {
   const modals = document.createElement('div')
@@ -10,7 +11,7 @@ export function useModal () {
   return {
     show (props: ModalProps|string) {
       if (typeof props === 'string') props = { title: props }
-      return spawn('modals', props, GlobalModal)
+      return spawn('modals', props, GlobalModal as unknown as ComponentOptionsWithObjectProps)
     }
   }
 }

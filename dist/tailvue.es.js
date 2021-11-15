@@ -2207,7 +2207,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     const active = ref(false);
     onMounted(() => active.value = true);
     async function destroy() {
-      console.log("modal-base destroy()");
       active.value = false;
       setTimeout(() => props.destroyed(), 200);
     }

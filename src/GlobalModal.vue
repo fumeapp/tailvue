@@ -43,8 +43,8 @@ import { Icon } from '@iconify/vue'
 import { removeElement } from './utils'
 import ModalBase from './ModalBase.vue'
 import PushButton from './PushButton.vue'
-import { ModalButton, ModalType } from './ModalTypes'
 import { onMounted, PropType, ref } from 'vue'
+import { ModalButton, ModalType } from '@/types/modal'
 
 const props = defineProps({
   type: {

@@ -63,7 +63,6 @@ const props = defineProps({
 const active = ref(false)
 onMounted(() => active.value = true)
 async function destroy() {
-  console.log('modal-base destroy()')
   active.value = false
   setTimeout(() => props.destroyed(), 200)
 }
