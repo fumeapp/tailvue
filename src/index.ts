@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue';
 import PushButton from './PushButton.vue'
-import { useModal } from './modal'
 import ModalBase from './ModalBase.vue'
+import { useModal } from './modal'
 import { useToast } from './toast'
 
 const install:Plugin = (app: App) => {

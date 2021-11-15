@@ -2,6 +2,7 @@
   "name": "@tailvue/nuxt",
   "version": "0.1.20",
   "description": "Nuxt module for tailvue",
+  "private": false,
   "keywords": [
     "tailvue",
     "vue3",
