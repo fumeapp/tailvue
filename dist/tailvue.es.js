@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { createApp, defineComponent, h, ref, onMounted, openBlock, createElementBlock, createElementVNode, createVNode, Transition, withCtx, unref, createCommentVNode, normalizeClass, renderSlot, computed, createBlock, toDisplayString, createTextVNode } from "vue";
+import { createApp, defineComponent, h, ref, onMounted, openBlock, createElementBlock, createElementVNode, createVNode, Transition, withCtx, unref, createCommentVNode, normalizeClass, renderSlot, computed, createBlock, toDisplayString, createTextVNode, Fragment, getCurrentInstance, normalizeStyle } from "vue";
 function removeElement(el) {
   if (!el)
     return;
@@ -2010,16 +2010,16 @@ const Icon = defineComponent({
     return render(icon.data, newProps);
   }
 });
-const _hoisted_1$2 = {
+const _hoisted_1$5 = {
   class: "fixed z-10 inset-0 overflow-y-auto",
   id: "ModalBase"
 };
-const _hoisted_2$2 = { class: "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0" };
-const _hoisted_3$1 = /* @__PURE__ */ createElementVNode("div", { class: "absolute inset-0 bg-black opacity-75" }, null, -1);
-const _hoisted_4$1 = { class: "fixed top-0 right-0 p-3" };
-const _hoisted_5$1 = { class: "p-3 cursor-pointer rounded-full transition ease-in-out duration-150 hover:bg-gray-800" };
-const _hoisted_6 = /* @__PURE__ */ createElementVNode("span", { class: "hidden sm:inline-block sm:align-middle sm:h-screen" }, "\xA0", -1);
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const _hoisted_2$5 = { class: "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0" };
+const _hoisted_3$3 = /* @__PURE__ */ createElementVNode("div", { class: "absolute inset-0 bg-black opacity-75" }, null, -1);
+const _hoisted_4$3 = { class: "fixed top-0 right-0 p-3" };
+const _hoisted_5$3 = { class: "p-3 cursor-pointer rounded-full transition ease-in-out duration-150 hover:bg-gray-800" };
+const _hoisted_6$1 = /* @__PURE__ */ createElementVNode("span", { class: "hidden sm:inline-block sm:align-middle sm:h-screen" }, "\xA0", -1);
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   props: {
     destroyed: {
       type: Function,
@@ -2049,8 +2049,8 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     }
     expose({ destroy });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
-        createElementVNode("div", _hoisted_2$2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+        createElementVNode("div", _hoisted_2$5, [
           createVNode(Transition, {
             "enter-active-class": "ease-out duration-300",
             "enter-from-class": "opacity-0",
@@ -2065,9 +2065,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                 class: "fixed inset-0 transition-opacity",
                 onClick: destroy
               }, [
-                _hoisted_3$1,
-                createElementVNode("div", _hoisted_4$1, [
-                  createElementVNode("div", _hoisted_5$1, [
+                _hoisted_3$3,
+                createElementVNode("div", _hoisted_4$3, [
+                  createElementVNode("div", _hoisted_5$3, [
                     createVNode(unref(Icon), {
                       icon: "mdi-close",
                       class: "w-6 h-6 text-gray-200 dark:text-gray-400"
@@ -2078,7 +2078,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }),
-          _hoisted_6,
+          _hoisted_6$1,
           createVNode(Transition, {
             "enter-active-class": "ease-out duration-300",
             "enter-from-class": "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
@@ -2200,12 +2200,12 @@ const themes = [
     disabled: ""
   }
 ];
-const _hoisted_1$1 = {
+const _hoisted_1$4 = {
   key: 0,
   class: "absolute top-0 right-0 -mr-1 -mt-1 z-10"
 };
-const _hoisted_2$1 = { class: "flex w-3 h-3 relative" };
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const _hoisted_2$4 = { class: "flex w-3 h-3 relative" };
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   props: {
     alwaysClick: Boolean,
     customTheme: Object,
@@ -2255,8 +2255,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         onClick: click
       }, [
         renderSlot(_ctx.$slots, "default"),
-        __props.ping ? (openBlock(), createElementBlock("span", _hoisted_1$1, [
-          createElementVNode("span", _hoisted_2$1, [
+        __props.ping ? (openBlock(), createElementBlock("span", _hoisted_1$4, [
+          createElementVNode("span", _hoisted_2$4, [
             createElementVNode("span", {
               class: normalizeClass(["animate-ping absolute inline-flex h-full w-full rounded-full opacity-75", __props.pingColor])
             }, null, 2),
@@ -2269,19 +2269,19 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1 = { class: "sm:flex sm:items-center" };
-const _hoisted_2 = { class: "mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left" };
-const _hoisted_3 = {
+const _hoisted_1$3 = { class: "sm:flex sm:items-center" };
+const _hoisted_2$3 = { class: "mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left" };
+const _hoisted_3$2 = {
   key: 0,
   class: "mb-2 text-lg leading-6 font-medium text-gray-900 dark:text-gray-300",
   id: "modal-headline"
 };
-const _hoisted_4 = ["innerHTML"];
-const _hoisted_5 = {
+const _hoisted_4$2 = ["innerHTML"];
+const _hoisted_5$2 = {
   key: 0,
   class: "mt-5 sm:mt-4 sm:flex sm:flex-row-reverse"
 };
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   props: {
     type: {
       type: String,
@@ -2336,7 +2336,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       removeElement((_a = modalBaseRef == null ? void 0 : modalBaseRef.value) == null ? void 0 : _a.$el);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$2, {
+      return openBlock(), createBlock(_sfc_main$5, {
         ref: (_value, _refs) => {
           _refs["modalBaseRef"] = _value;
           modalBaseRef.value = _value;
@@ -2345,7 +2345,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         destroyed: destroy
       }, {
         default: withCtx(() => [
-          createElementVNode("div", _hoisted_1, [
+          createElementVNode("div", _hoisted_1$3, [
             createElementVNode("div", {
               class: normalizeClass([typeColors[__props.type], "mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10"])
             }, [
@@ -2370,17 +2370,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 class: "h-5 w-5 text-yellow-500"
               })) : createCommentVNode("", true)
             ], 2),
-            createElementVNode("div", _hoisted_2, [
-              __props.title ? (openBlock(), createElementBlock("h3", _hoisted_3, toDisplayString(__props.title), 1)) : createCommentVNode("", true),
+            createElementVNode("div", _hoisted_2$3, [
+              __props.title ? (openBlock(), createElementBlock("h3", _hoisted_3$2, toDisplayString(__props.title), 1)) : createCommentVNode("", true),
               __props.body ? (openBlock(), createElementBlock("p", {
                 key: 1,
                 class: "text-sm leading-5",
                 innerHTML: __props.body
-              }, null, 8, _hoisted_4)) : createCommentVNode("", true)
+              }, null, 8, _hoisted_4$2)) : createCommentVNode("", true)
             ])
           ]),
-          __props.primary ? (openBlock(), createElementBlock("div", _hoisted_5, [
-            __props.primary ? (openBlock(), createBlock(_sfc_main$1, {
+          __props.primary ? (openBlock(), createElementBlock("div", _hoisted_5$2, [
+            __props.primary ? (openBlock(), createBlock(_sfc_main$4, {
               key: 0,
               ref: (_value, _refs) => {
                 _refs["primaryRef"] = _value;
@@ -2395,7 +2395,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               ]),
               _: 1
             }, 8, ["theme"])) : createCommentVNode("", true),
-            __props.secondary ? (openBlock(), createBlock(_sfc_main$1, {
+            __props.secondary ? (openBlock(), createBlock(_sfc_main$4, {
               key: 1,
               class: "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto",
               theme: __props.secondary.theme,
@@ -2422,8 +2422,386 @@ function useModal() {
     show(props) {
       if (typeof props === "string")
         props = { title: props };
-      return spawn("modals", props, _sfc_main);
+      return spawn("modals", props, _sfc_main$3);
     }
   };
 }
-export { _sfc_main$2 as ModalBase, useModal };
+const _hoisted_1$2 = {
+  key: 0,
+  class: "border-2 border-green-200 rounded-full p-1"
+};
+const _hoisted_2$2 = {
+  key: 1,
+  class: "border-2 border-blue-200 rounded-full p-1"
+};
+const _hoisted_3$1 = {
+  key: 2,
+  class: "border-2 border-yellow-200 rounded-full p-1"
+};
+const _hoisted_4$1 = {
+  key: 3,
+  class: "border-2 border-red-200 rounded-full p-1"
+};
+const _hoisted_5$1 = {
+  key: 4,
+  class: "rounded-full"
+};
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+  props: {
+    type: String
+  },
+  setup(__props) {
+    const props = __props;
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock(Fragment, null, [
+        props.type === "success" ? (openBlock(), createElementBlock("div", _hoisted_1$2, [
+          createVNode(unref(Icon), {
+            icon: "mdi-check",
+            class: "h-3 w-3 text-green-400"
+          })
+        ])) : createCommentVNode("", true),
+        props.type === "info" ? (openBlock(), createElementBlock("div", _hoisted_2$2, [
+          createVNode(unref(Icon), {
+            icon: "bi-info-lg",
+            class: "h-3 w-3 text-blue-400"
+          })
+        ])) : createCommentVNode("", true),
+        props.type === "warning" ? (openBlock(), createElementBlock("div", _hoisted_3$1, [
+          createVNode(unref(Icon), {
+            icon: "mdi-exclamation-thick",
+            class: "h-3 w-3 text-yellow-400"
+          })
+        ])) : createCommentVNode("", true),
+        props.type === "danger" ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
+          createVNode(unref(Icon), {
+            icon: "mdi-exclamation-thick",
+            class: "h-3 w-3 text-red-400"
+          })
+        ])) : createCommentVNode("", true),
+        props.type === "denied" ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
+          createVNode(unref(Icon), {
+            icon: "mdi-cancel",
+            class: "h-3 w-3 text-red-400"
+          })
+        ])) : createCommentVNode("", true)
+      ], 64);
+    };
+  }
+});
+const _hoisted_1$1 = { class: "ml-4 flex-shrink-0 flex" };
+const _hoisted_2$1 = /* @__PURE__ */ createElementVNode("span", { class: "sr-only" }, "Close", -1);
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  emits: ["close"],
+  setup(__props, { emit }) {
+    function close() {
+      emit("close");
+    }
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+        createElementVNode("button", {
+          onClick: close,
+          class: "bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        }, [
+          _hoisted_2$1,
+          createVNode(unref(Icon), {
+            icon: "mdi-close-thick",
+            class: "w-4 h-4"
+          })
+        ])
+      ]);
+    };
+  }
+});
+const _hoisted_1 = {
+  key: 0,
+  class: "max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden"
+};
+const _hoisted_2 = { class: "rounded-lg shadow-xs overflow-hidden z-100" };
+const _hoisted_3 = { class: "p-4" };
+const _hoisted_4 = { class: "flex items-start" };
+const _hoisted_5 = { class: "flex-shrink-0" };
+const _hoisted_6 = { class: "ml-3 w-0 flex-1 pt-0.5" };
+const _hoisted_7 = {
+  key: 0,
+  class: "text-sm leading-5 font-medium"
+};
+const _hoisted_8 = ["innerHTML"];
+const _hoisted_9 = { class: "ml-4 flex-shrink-0 flex" };
+const _hoisted_10 = {
+  key: 1,
+  class: "max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden"
+};
+const _hoisted_11 = { class: "flex rounded-lg shadow-xs" };
+const _hoisted_12 = { class: "w-0 flex-1 flex items-center p-4" };
+const _hoisted_13 = { class: "flex-shrink-0 mr-4" };
+const _hoisted_14 = { class: "w-full" };
+const _hoisted_15 = {
+  key: 0,
+  class: "text-sm leading-5 font-medium"
+};
+const _hoisted_16 = ["innerHTML"];
+const _hoisted_17 = { class: "flex border-l border-gray-200" };
+const _hoisted_18 = { class: "-ml-px flex flex-col" };
+const _hoisted_19 = { class: "h-0 flex-1 flex border-b border-gray-200" };
+const _hoisted_20 = { class: "-mt-px h-0 flex-1 flex" };
+const _hoisted_21 = {
+  key: 2,
+  class: "max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden"
+};
+const _hoisted_22 = { class: "rounded-lg shadow-xs overflow-hidden" };
+const _hoisted_23 = { class: "p-4" };
+const _hoisted_24 = { class: "flex items-center" };
+const _hoisted_25 = { class: "flex-shrink-0 mr-4" };
+const _hoisted_26 = { class: "w-0 flex-1 flex justify-between" };
+const _hoisted_27 = ["innerHTML"];
+const _hoisted_28 = { class: "ml-4 flex-shrink-0 flex" };
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  props: {
+    title: String,
+    message: {
+      type: String,
+      required: false,
+      default: "Please specify a <b>message</b>"
+    },
+    type: {
+      type: String,
+      required: false,
+      default: "info"
+    },
+    progress: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    timeout: {
+      type: Number,
+      required: false,
+      default: 2
+    },
+    icon: {
+      type: [Boolean, String],
+      required: false,
+      default: false
+    },
+    primary: Object,
+    secondary: Object
+  },
+  setup(__props) {
+    const props = __props;
+    const toastRef = ref(void 0);
+    const active = ref(false);
+    let interval = void 0;
+    const timeLeft = ref(0);
+    const speed = 100;
+    const instance = getCurrentInstance();
+    const timeLeftPercent = computed(() => Math.round(timeLeft.value * 100 / (props.timeout * 1e3) * 100 / 100));
+    const progressStyle = computed(() => `width: ${timeLeftPercent.value}%; transition: width 0.1s linear`);
+    onMounted(() => {
+      active.value = true;
+      if (props.timeout > 0) {
+        timeLeft.value = props.timeout * 1e3;
+        interval = setInterval(() => updateTime(), speed);
+      }
+    });
+    function updateTime() {
+      timeLeft.value -= speed;
+      if (timeLeft.value === 0)
+        destroy();
+    }
+    function destroy(instant = false) {
+      clearInterval(interval);
+      if (instant) {
+        active.value = false;
+        setTimeout(() => removeElement(toastRef == null ? void 0 : toastRef.value), 100);
+        setTimeout(() => instance == null ? void 0 : instance.appContext.app.unmount(), 100);
+      } else {
+        setTimeout(() => active.value = false, 100);
+        setTimeout(() => removeElement(toastRef == null ? void 0 : toastRef.value), 200);
+        setTimeout(() => instance == null ? void 0 : instance.appContext.app.unmount(), 200);
+      }
+    }
+    function primaryAction() {
+      if (props.primary)
+        props.primary.action();
+      destroy();
+    }
+    function secondaryAction() {
+      if (props.secondary)
+        props.secondary.action();
+      destroy();
+    }
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", {
+        ref: (_value, _refs) => {
+          _refs["toastRef"] = _value;
+          toastRef.value = _value;
+        }
+      }, [
+        createVNode(Transition, {
+          "enter-active-class": "transform ease-out duration-300 transition",
+          "enter-from-class": "translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2",
+          "enter-to-class": "translate-y-0 opacity-100 sm:translate-x-0",
+          "leave-active-class": "transform ease-in duration-100 transition",
+          "leave-from-class": "translate-y-0 opacity-100 sm:translate-y-0 sm:translate-x-0",
+          "leave-to-class": "translate-y-1 opacity-0 sm:translate-y-0 sm:translate-x-1"
+        }, {
+          default: withCtx(() => [
+            active.value && !__props.primary ? (openBlock(), createElementBlock("div", _hoisted_1, [
+              __props.progress && __props.timeout ? (openBlock(), createElementBlock("div", {
+                key: 0,
+                class: "absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-200 dark:bg-gray-700",
+                style: normalizeStyle(unref(progressStyle))
+              }, null, 4)) : createCommentVNode("", true),
+              createElementVNode("div", _hoisted_2, [
+                createElementVNode("div", _hoisted_3, [
+                  createElementVNode("div", _hoisted_4, [
+                    createElementVNode("div", _hoisted_5, [
+                      createVNode(_sfc_main$2, { type: __props.type }, null, 8, ["type"])
+                    ]),
+                    createElementVNode("div", _hoisted_6, [
+                      __props.title ? (openBlock(), createElementBlock("p", _hoisted_7, toDisplayString(__props.title), 1)) : createCommentVNode("", true),
+                      createElementVNode("p", {
+                        class: normalizeClass([{ "mt-1": __props.title }, "text-sm leading-5"]),
+                        innerHTML: __props.message
+                      }, null, 10, _hoisted_8)
+                    ]),
+                    createElementVNode("div", _hoisted_9, [
+                      createVNode(_sfc_main$1, {
+                        onClose: _cache[0] || (_cache[0] = ($event) => destroy(true))
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            ])) : active.value && __props.primary && __props.secondary ? (openBlock(), createElementBlock("div", _hoisted_10, [
+              __props.progress && __props.timeout ? (openBlock(), createElementBlock("div", {
+                key: 0,
+                class: "absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900",
+                style: normalizeStyle(unref(progressStyle))
+              }, null, 4)) : createCommentVNode("", true),
+              createElementVNode("div", _hoisted_11, [
+                createElementVNode("div", _hoisted_12, [
+                  createElementVNode("div", _hoisted_13, [
+                    createVNode(_sfc_main$2, { type: __props.type }, null, 8, ["type"])
+                  ]),
+                  createElementVNode("div", _hoisted_14, [
+                    __props.title ? (openBlock(), createElementBlock("p", _hoisted_15, toDisplayString(__props.title), 1)) : createCommentVNode("", true),
+                    createElementVNode("p", {
+                      class: normalizeClass([{ "mt-1": __props.title }, "text-sm leading-5"]),
+                      innerHTML: __props.message
+                    }, null, 10, _hoisted_16)
+                  ])
+                ]),
+                createElementVNode("div", _hoisted_17, [
+                  createElementVNode("div", _hoisted_18, [
+                    createElementVNode("div", _hoisted_19, [
+                      createElementVNode("button", {
+                        class: "-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none",
+                        onClick: primaryAction
+                      }, toDisplayString(__props.primary.label), 1)
+                    ]),
+                    createElementVNode("div", _hoisted_20, [
+                      createElementVNode("button", {
+                        class: "flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none",
+                        onClick: secondaryAction
+                      }, toDisplayString(__props.secondary.label), 1)
+                    ])
+                  ])
+                ])
+              ])
+            ])) : active.value && __props.primary && !__props.secondary ? (openBlock(), createElementBlock("div", _hoisted_21, [
+              __props.progress && __props.timeout ? (openBlock(), createElementBlock("div", {
+                key: 0,
+                class: "absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900",
+                style: normalizeStyle(unref(progressStyle))
+              }, null, 4)) : createCommentVNode("", true),
+              createElementVNode("div", _hoisted_22, [
+                createElementVNode("div", _hoisted_23, [
+                  createElementVNode("div", _hoisted_24, [
+                    createElementVNode("div", _hoisted_25, [
+                      createVNode(_sfc_main$2, { type: __props.type }, null, 8, ["type"])
+                    ]),
+                    createElementVNode("div", _hoisted_26, [
+                      createElementVNode("p", {
+                        class: "w-0 flex-1 text-sm leading-5",
+                        innerHTML: __props.message
+                      }, null, 8, _hoisted_27),
+                      createElementVNode("button", {
+                        class: "ml-3 flex-shrink-0 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none focus:underline'",
+                        onClick: primaryAction
+                      }, toDisplayString(__props.primary.label), 1)
+                    ]),
+                    createElementVNode("div", _hoisted_28, [
+                      createElementVNode("button", {
+                        class: "inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150",
+                        onClick: destroy
+                      }, [
+                        createVNode(_sfc_main$1, {
+                          onClose: _cache[1] || (_cache[1] = ($event) => destroy(true))
+                        })
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])) : createCommentVNode("", true)
+          ]),
+          _: 1
+        })
+      ], 512);
+    };
+  }
+});
+const outerClasses = [
+  "z-40",
+  "fixed",
+  "inset-0",
+  "flex",
+  "sm:items-start",
+  "px-4",
+  "py-6",
+  "pointer-events-none",
+  "sm:p-6"
+];
+const innerClasses = [
+  "w-full",
+  "flex",
+  "flex-col-reverse",
+  "items-center",
+  "sm:items-end",
+  "sm:justify-end"
+];
+const elClasses = ["w-full", "max-w-sm", "mt-4"];
+function useToast() {
+  const outer = document.createElement("div");
+  outerClasses.forEach((c) => outer.classList.add(c));
+  outer.setAttribute("aria-alive", "assertive");
+  const inner = document.createElement("div");
+  innerClasses.forEach((c) => inner.classList.add(c));
+  inner.setAttribute("id", "toasts");
+  outer.appendChild(inner);
+  document.body.appendChild(outer);
+  return {
+    show(props) {
+      if (typeof props === "string")
+        props = { message: props };
+      return spawn("toasts", props, _sfc_main, elClasses);
+    },
+    success(message) {
+      return spawn("toasts", { type: "success", message }, _sfc_main, elClasses);
+    },
+    info(message) {
+      return spawn("toasts", { type: "info", message }, _sfc_main, elClasses);
+    },
+    danger(message) {
+      return spawn("toasts", { type: "danger", message, timeout: 20 }, _sfc_main, elClasses);
+    },
+    warning(message) {
+      return spawn("toasts", { type: "warning", message, timeout: 10 }, _sfc_main, elClasses);
+    },
+    denied(message) {
+      return spawn("toasts", { type: "denied", message, timeout: 10 }, _sfc_main, elClasses);
+    }
+  };
+}
+export { _sfc_main$5 as ModalBase, useModal, useToast };
