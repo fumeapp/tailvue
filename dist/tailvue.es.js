@@ -17,6 +17,10 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
 import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, createElementVNode, createCommentVNode, createApp, h, ref, onMounted, createVNode, Transition, withCtx, createBlock, toDisplayString, createTextVNode, Fragment, getCurrentInstance, normalizeStyle } from "vue";
 const themes = [
   {
@@ -2807,4 +2811,13 @@ const install = (app) => {
   app.component("PushButton", _sfc_main$5);
   app.component("ModalBase", _sfc_main$4);
 };
-export { _sfc_main$4 as ModalBase, _sfc_main$5 as PushButton, install, useModal, useToast };
+class Tailvue {
+  constructor() {
+    __publicField(this, "PushButton", _sfc_main$5);
+    __publicField(this, "ModalBase", _sfc_main$4);
+    __publicField(this, "useModal", useModal);
+    __publicField(this, "useToast", useToast);
+  }
+}
+__publicField(Tailvue, "install", install);
+export { Tailvue as default };
