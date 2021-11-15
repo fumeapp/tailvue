@@ -37,6 +37,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
+    "index.cjs",
     "dist"
   ],
   "scripts": {
