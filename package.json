@@ -15,7 +15,8 @@
     "windicss"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src/types/*"
   ],
   "main": "./dist/tailvue.umd.js",
   "module": "./dist/tailvue.es.js",
