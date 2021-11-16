@@ -46,6 +46,7 @@
     "postcss": "^8.3.11",
     "simple-syntax-highlighter": "^2.2.0",
     "tailwindcss": "^2.2.19",
+    "tsup": "^5.7.0",
     "unbuild": "^0.5.11",
     "vite": "^2.6.14"
   }

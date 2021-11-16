@@ -2,9 +2,10 @@ import { Options } from 'tsup'
 
 const config: Options = {
   splitting: false,
+  allowSyntheticDefaultImports: true,
   format: ['esm'],
   entryPoints: [
-    'src/index.ts',
+    'src/module.ts',
   ],
   target: 'node14',
   clean: true,
