@@ -46,7 +46,7 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@nuxt/kit": "^0.7.0-edge",
+    "@nuxt/kit-edge": "^3.0.0-27283410.c53b6a5",
     "pathe": "^0.2.0",
     "tailvue": "^0.1.30"
   },
