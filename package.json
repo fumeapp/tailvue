@@ -18,6 +18,7 @@
     "dist",
     "src/types/*"
   ],
+  "types": "src/typings.d.ts",
   "main": "./dist/tailvue.umd.js",
   "module": "./dist/tailvue.es.js",
   "exports": {
