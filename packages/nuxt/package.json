@@ -1,6 +1,6 @@
 {
   "name": "@tailvue/nuxt",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "description": "Nuxt module for tailvue",
   "private": false,
   "keywords": [
@@ -35,7 +35,7 @@
   },
   "main": "module.cjs",
   "module": "./dist/module.mjs",
-  "types": "./dist/module.d.ts",
+  "types": "./dist/runtime/plugin.d.ts",
   "files": [
     "dist/*.cjs",
     "module.cjs",
