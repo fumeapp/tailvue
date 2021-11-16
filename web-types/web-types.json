@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json.schemastore.org/web-types",
+  "name": "tailvue",
+  "framework": "vue",
+  "version": "0.1.34",
+  "contributions": {
+    "html": {
+      "description-markup": "markdown",
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "PushButton",
+          "aliases": [ ],
+          "description": "This component is used to supply buttons",
+          "doc-url": "https://github.com/fumeapp/tailvue/blob/main/src/PushButton.vue",
+          "attributes": [
+            {
+              "name": "state",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "theme",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "size",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

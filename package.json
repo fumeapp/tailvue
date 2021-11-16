@@ -17,7 +17,8 @@
   "files": [
     "dist",
     "src/types/*",
-    "src/typings.d.ts"
+    "src/typings.d.ts",
+    "web-types"
   ],
   "types": "src/typings.d.ts",
   "main": "./dist/tailvue.umd.js",
@@ -50,5 +51,6 @@
     "tsup": "^5.7.0",
     "unbuild": "^0.5.11",
     "vite": "^2.6.14"
-  }
+  },
+  "web-types": "web-types/web-types.json"
 }
