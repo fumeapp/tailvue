@@ -16,7 +16,7 @@
         <div class="rounded-lg shadow-xs overflow-hidden z-100">
           <div class="p-4">
             <div class="flex items-start">
-              <div class="flex-shrink-0">
+              <div v-if="props.icon !== false" class="flex-shrink-0">
                 <global-toast-icons :type="type" />
               </div>
               <div class="ml-3 w-0 flex-1 pt-0.5">
@@ -33,8 +33,8 @@
       <div v-else-if="active && primary && secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
         <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900" :style="progressStyle"></div>
         <div class="flex rounded-lg shadow-xs divide-x divide-gray-200 ">
-          <div class="w-0 flex-1 flex items-center p-4">
-            <div class="flex-shrink-0 mr-4">
+          <div class="w-0 flex-1 flex items-start p-4">
+            <div v-if="props.icon !== false" class="flex-shrink-0 mr-4">
               <global-toast-icons :type="type" />
             </div>
             <div class="w-full">
@@ -69,7 +69,7 @@
         <div class="rounded-lg shadow-xs overflow-hidden">
           <div class="p-4">
             <div class="flex items-center">
-              <div class="flex-shrink-0 mr-4">
+              <div v-if="props.icon !== false" class="flex-shrink-0 mr-4">
                 <global-toast-icons :type="type" />
               </div>
               <div class="w-0 flex-1 flex justify-between">
@@ -102,6 +102,11 @@ import GlobalToastClose from './GlobalToastClose.vue'
 import { ToastAction, ToastType } from './types/toast'
 const props = defineProps({
   title: String,
+  icon: {
+    type: [Boolean, String],
+    required: false,
+    default: undefined,
+  },
   message: {
     type: String,
     required: false,
@@ -122,11 +127,6 @@ const props = defineProps({
     required: false,
     default: 2,
   },
-  icon: {
-    type: [Boolean, String],
-    required: false,
-    default: false,
-  },
   primary: Object as PropType<ToastAction>,
   secondary: Object as PropType<ToastAction>,
 })
@@ -137,6 +137,8 @@ const timeLeft = ref(0)
 const speed = 100
 const instance = getCurrentInstance()
 
+const type = computed((): string => (typeof props.icon === 'string') ? props.icon : props.type)
+
 const timeLeftPercent = computed((): number => Math.round(((timeLeft.value * 100 / (props.timeout * 1000)) * 100) / 100))
 const progressStyle = computed((): string => `width: ${timeLeftPercent.value}%; transition: width 0.1s linear`)
 
@@ -146,7 +148,6 @@ onMounted(() => {
     timeLeft.value = props.timeout * 1000
     interval = setInterval(() => updateTime(), speed)
   }
-  console.log('$toast onMounted()')
 })
 
 function updateTime() {

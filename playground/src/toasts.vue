@@ -4,6 +4,7 @@
   <push-button @click="warn">warning('warning')</push-button>
   <push-button @click="single">single action</push-button>
   <push-button @click="double">primary and secondary action</push-button>
+  <push-button @click="customIcon">{ icon: 'logos-nuxt-icon' }</push-button>
 </template>
 
 <script lang="ts" setup>
@@ -38,7 +39,6 @@ function double() {
     type: 'info',
     title: 'this is the title',
     message: 'dual action toast',
-    timeout: 0,
     primary: {
       label: 'OK',
       action: () => $toast.success('you clicked OK')
@@ -48,5 +48,9 @@ function double() {
       action: () => $toast.warning('you clicked Cancel')
     }
   })
+}
+
+function customIcon() {
+  $toast.show({ icon: 'logos-nuxt-icon', message: 'custom icon' })
 }
 </script>
