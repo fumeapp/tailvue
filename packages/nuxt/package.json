@@ -29,16 +29,18 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./module.cjs"
     }
   },
-  "main": "./index.cjs",
+  "main": "module.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "index.cjs",
-    "dist"
+    "module.cjs",
+    "dist/*.js",
+    "dist/*.mjs",
+    "dist/*.d.ts"
   ],
   "scripts": {
     "build": "tsup"
@@ -46,9 +48,15 @@
   "dependencies": {
     "tailvue": "^0.1.20"
   },
+  "peerDependencies": {
+    "tailvue": "^0.1.20"
+  },
   "devDependencies": {
     "tsup": "^5.7.0",
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
     "@nuxt/types": "^2.15.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
