@@ -32,50 +32,36 @@
       </div>
       <div v-else-if="active && primary && secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
         <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900" :style="progressStyle"></div>
-        <div class="flex rounded-lg shadow-xs">
+        <div class="flex rounded-lg shadow-xs divide-x divide-gray-200 ">
           <div class="w-0 flex-1 flex items-center p-4">
             <div class="flex-shrink-0 mr-4">
               <global-toast-icons :type="type" />
             </div>
             <div class="w-full">
-              <p v-if="title" class="text-sm leading-5 font-medium">{{ title }}</p>
-              <p :class="{'mt-1': title}" class="text-sm leading-5" v-html="message"></p>
+              <p v-if="title" class="text-sm leading-5 font-medium text-gray-900">{{ title }}</p>
+              <p :class="{'mt-1': title}" class="text-sm leading-5 text-gray-500" v-html="message"></p>
             </div>
           </div>
           <div class="flex">
             <div class="flex flex-col divide-y divide-gray-200">
               <div class="h-0 flex-1 flex">
-                <button class="w-full border border-transparent rounded-none rounded-tr-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:z-10 focus:ring-2 focus:ring-indigo-500">
-                  Reply
-                </button>
-              </div>
-              <div class="h-0 flex-1 flex">
-                <button class="w-full border border-transparent rounded-none rounded-br-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                  Don't allow
-                </button>
-              </div>
-            </div>
-          </div>
-          <!--
-          <div class="flex border-l border-gray-200">
-            <div class="-ml-px flex flex-col">
-              <div class="h-0 flex-1 flex border-b border-gray-200">
                 <button
-                  class="-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none"
-                  @click="primaryAction">
+                  class="w-full border border-transparent rounded-none rounded-tr-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:z-10 focus:ring-2 focus:ring-indigo-500"
+                  @click="primaryAction"
+                >
                   {{ primary.label }}
                 </button>
               </div>
-              <div class="-mt-px h-0 flex-1 flex">
+              <div class="h-0 flex-1 flex">
                 <button
-                  class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none"
-                  @click="secondaryAction">
+                  class="w-full border border-transparent rounded-none rounded-br-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  @click="secondaryAction"
+                >
                   {{ secondary.label }}
                 </button>
               </div>
             </div>
           </div>
-          -->
         </div>
       </div>
       <div v-else-if="active && primary && !secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">

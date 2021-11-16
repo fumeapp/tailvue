@@ -1,7 +1,7 @@
 import GlobalToast from './GlobalToast.vue'
 import { spawn } from './utils'
-import { TailvueToast, ToastProps } from '@/types/toast'
 import { ComponentOptionsWithObjectProps } from 'vue'
+import { TailvueToast } from './types/toast'
 
 const outerClasses = [
   'z-40', 'fixed',  'inset-0', 'flex',  'sm:items-start',
