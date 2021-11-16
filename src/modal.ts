@@ -1,9 +1,9 @@
 import { spawn } from './utils'
 import GlobalModal from './GlobalModal.vue'
-import { ModalProps } from '@/types/modal'
+import { ModalProps, TailvueModal } from '@/types/modal'
 import { ComponentOptionsWithObjectProps } from 'vue'
 
-export function useModal () {
+export function useModal (): TailvueModal {
   const modals = document.createElement('div')
   modals.classList.add('z-30')
   modals.setAttribute('id', 'modals')

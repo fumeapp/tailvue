@@ -1,6 +1,6 @@
 import GlobalToast from './GlobalToast.vue'
 import { spawn } from './utils'
-import { ToastProps } from '@/types/toast'
+import { TailvueToast, ToastProps } from '@/types/toast'
 import { ComponentOptionsWithObjectProps } from 'vue'
 
 const outerClasses = [
@@ -15,7 +15,7 @@ const innerClasses = [
 
 const elClasses = ['w-full', 'max-w-sm', 'mt-4']
 
-export function useToast() {
+export function useToast(): TailvueToast {
   const outer = document.createElement('div')
   outerClasses.forEach(c => outer.classList.add(c))
   outer.setAttribute('aria-alive', 'assertive')
