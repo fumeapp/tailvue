@@ -1,4 +1,4 @@
-import { PushButtonThemeName } from '@/types/push-button'
+import { PushButtonThemeName } from './push-button'
 
 export type ModalType = 'success'|'info'|'danger'|'warning'
 

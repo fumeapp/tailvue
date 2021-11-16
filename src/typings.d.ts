@@ -1,6 +1,6 @@
 import { DefineComponent } from 'vue'
-import { TailvueModal } from '@/types/modal'
-import { TailvueToast } from '@/types/toast'
+import { TailvueModal } from './types/modal'
+import { TailvueToast } from './types/toast'
 
 export * from './types/modal'
 export * from './types/push-button'

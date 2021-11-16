@@ -44,7 +44,7 @@ import { removeElement } from './utils'
 import ModalBase from './ModalBase.vue'
 import PushButton from './PushButton.vue'
 import { onMounted, PropType, ref } from 'vue'
-import { ModalButton, ModalType } from '@/types/modal'
+import { ModalButton, ModalType } from './types/modal'
 
 const props = defineProps({
   type: {

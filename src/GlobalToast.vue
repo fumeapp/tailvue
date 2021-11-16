@@ -96,7 +96,7 @@ import { removeElement } from './utils'
 import { computed, getCurrentInstance, onMounted, PropType, ref } from 'vue'
 import GlobalToastIcons from './GlobalToastIcons.vue'
 import GlobalToastClose from './GlobalToastClose.vue'
-import { ToastAction, ToastType } from '@/types/toast'
+import { ToastAction, ToastType } from './types/toast'
 const props = defineProps({
   title: String,
   message: {

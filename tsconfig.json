@@ -10,8 +10,8 @@
       "node"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
+      "tailvue": [
+        "src/*",
       ]
     },
     "lib": [
@@ -24,6 +24,7 @@
     "src/typings.d.ts",
   ],
   "exclude": [
-    "node_modules"
+    "**/dist/**",
+    "**/node_modules/**"
   ]
 }
