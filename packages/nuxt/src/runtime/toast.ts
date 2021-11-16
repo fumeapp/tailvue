@@ -1,15 +1,14 @@
 import { useToast, useModal, TailvueModal, TailvueToast, ModalBase, PushButton } from 'tailvue'
+// @ts-ignore: resolved with nuxt
 import { defineNuxtPlugin } from '#app'
-export default defineNuxtPlugin((nuxtApp) => {
-  if (!nuxtApp.$toast) {
-    nuxtApp.provide('toast', useToast())
-    nuxtApp.provide('modal', useModal())
-  }
+export default defineNuxtPlugin((nuxtApp: any) => {
+  nuxtApp.provide('toast', useToast())
+  nuxtApp.provide('modal', useModal())
   nuxtApp.vueApp.component('PushButton', PushButton)
   nuxtApp.vueApp.component('ModalBase', ModalBase)
 })
 
-// @ts-ignore
+// @ts-ignore: resolved with nuxt
 declare module '#app' {
   interface NuxtApp {
     $toast: TailvueToast

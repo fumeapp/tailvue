@@ -1,4 +1,4 @@
-import { PushButtonThemes } from '@/types/push-button'
+import { PushButtonThemes } from './types/push-button'
 
 export const themes: PushButtonThemes = [
   {
@@ -35,12 +35,6 @@ export const themes: PushButtonThemes = [
     active: 'hover:text-gray-500 hover:bg-gray-100 focus:outline-none active:text-gray-800 active:bg-gray-50',
   },
   {
-    name: 'dark',
-    primary: 'border border-gray-600 text-gray-300 bg-gray-700',
-    active: 'hover:bg-gray-600 hover:text-gray-400 focus:outline-none focus:border-blue-600 focus:shadow-outline-blue active:text-gray-200 active:bg-gray-500',
-    disabled: '',
-  },
-  {
     name: 'indigo',
     primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-indigo-600',
     active: 'hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
@@ -49,13 +43,13 @@ export const themes: PushButtonThemes = [
   {
     name: 'indigo-light',
     primary: 'text-indigo-700 bg-indigo-100',
-    active: 'hover:bg-indigo-50 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-indigo-200',
+    active: 'hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 active:bg-indigo-200',
     disabled: '',
   },
   {
     name: 'indigo-dark',
     primary: 'text-indigo-200 bg-indigo-900 rounded shadow-sm ',
-    active: 'hover:bg-indigo-700 hover:text-white focus:outline-none focus:border-indigo-800 focus:shadow-outline-indigo active:bg-indigo-800',
+    active: 'hover:bg-indigo-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 active:bg-indigo-800',
     disabled: '',
   },
   {

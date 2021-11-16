@@ -12,7 +12,6 @@ export type PushButtonThemeName =
   'white-mid' |
   'white-right' |
   'text' |
-  'dark' |
   'indigo' |
   'indigo-light' |
   'indigo-dark' |
