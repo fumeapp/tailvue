@@ -42,6 +42,21 @@
               <p :class="{'mt-1': title}" class="text-sm leading-5" v-html="message"></p>
             </div>
           </div>
+          <div class="flex">
+            <div class="flex flex-col divide-y divide-gray-200">
+              <div class="h-0 flex-1 flex">
+                <button class="w-full border border-transparent rounded-none rounded-tr-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                  Reply
+                </button>
+              </div>
+              <div class="h-0 flex-1 flex">
+                <button class="w-full border border-transparent rounded-none rounded-br-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  Don't allow
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--
           <div class="flex border-l border-gray-200">
             <div class="-ml-px flex flex-col">
               <div class="h-0 flex-1 flex border-b border-gray-200">
@@ -60,6 +75,7 @@
               </div>
             </div>
           </div>
+          -->
         </div>
       </div>
       <div v-else-if="active && primary && !secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
@@ -73,7 +89,8 @@
               <div class="w-0 flex-1 flex justify-between">
                 <p class="w-0 flex-1 text-sm leading-5" v-html="message"></p>
                 <button
-                  class="ml-3 flex-shrink-0 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none focus:underline'"
+                  type="button"
+                  class="ml-3 flex-shrink-0 bg-white rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   @click="primaryAction"
                 >{{ primary.label }}</button>
               </div>
@@ -143,6 +160,7 @@ onMounted(() => {
     timeLeft.value = props.timeout * 1000
     interval = setInterval(() => updateTime(), speed)
   }
+  console.log('$toast onMounted()')
 })
 
 function updateTime() {
