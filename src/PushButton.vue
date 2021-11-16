@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PropType, computed } from 'vue'
 import { themes } from './PushButtonThemes'
-import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from '@/types/push-button'
+import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './types/push-button'
 const emit = defineEmits(['click'])
 const props = defineProps({
   alwaysClick: Boolean,
