@@ -1,6 +1,6 @@
 {
   "name": "tailvue",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "description": "tailwind and windicss components for Vue",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
