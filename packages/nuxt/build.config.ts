@@ -14,6 +14,6 @@ export default defineBuildConfig({
   externals: [
     '@nuxt/kit',
     '@nuxt/kit-edge',
-    'nuxt3',
+    'pathe',
   ],
 });

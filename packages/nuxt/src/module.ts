@@ -4,15 +4,16 @@ export interface TailvueOptions {
 
 }
 
+import { resolve } from 'pathe'
+import { distDir } from './dirs'
+
 export default defineNuxtModule<TailvueOptions>({
   name: 'tailvue',
-  setup (options, nuxt) {
-    console.log('in setup before addPluginTemplate')
+  setup () {
     addPluginTemplate({
-      filename: 'toast.mjs',
-      src: 'node_modules/@tailvue/nuxt/dist/runtime/toast.mjs',
+      filename: 'plugin.mjs',
+      src: resolve(distDir, 'runtime/plugin.mjs'),
       mode: 'client'
     })
-    console.log('in setup after addPluginTemplate')
   }
 })

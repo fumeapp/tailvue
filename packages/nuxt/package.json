@@ -1,6 +1,6 @@
 {
   "name": "@tailvue/nuxt",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "description": "Nuxt module for tailvue",
   "private": false,
   "keywords": [
@@ -46,8 +46,9 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "nuxt3": "latest",
-    "tailvue": "latest"
+    "@nuxt/kit": "^0.7.0-edge",
+    "pathe": "^0.2.0",
+    "tailvue": "^0.1.30"
   },
   "peerDependencies": {
     "tailvue": "workspace:*"
