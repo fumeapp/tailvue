@@ -16,7 +16,8 @@
   ],
   "files": [
     "dist",
-    "src/types/*"
+    "src/types/*",
+    "src/typings.d.ts"
   ],
   "types": "src/typings.d.ts",
   "main": "./dist/tailvue.umd.js",
