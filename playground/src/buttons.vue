@@ -1,7 +1,8 @@
 <template>
   <push-button>
-    &lt;push-button&gt;
+    simple button
   </push-button>
+
   <push-button state="disabled">
     state="disabled"
   </push-button>
@@ -28,4 +29,5 @@
 </template>
 <script lang="ts" setup>
 import PushButton from '../../src/PushButton.vue'
+
 </script>

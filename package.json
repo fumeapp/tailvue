@@ -1,7 +1,7 @@
 {
   "name": "tailvue",
   "version": "0.1.21",
-  "description": "tailwind and windicss components for Vue and Nuxt",
+  "description": "tailwind and windicss components for Vue",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
   "license": "MIT",
@@ -44,6 +44,7 @@
     "@vitejs/plugin-vue": "^1.9.4",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.11",
+    "simple-syntax-highlighter": "^2.2.0",
     "tailwindcss": "^2.2.19",
     "unbuild": "^0.5.11",
     "vite": "^2.6.14"

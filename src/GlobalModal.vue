@@ -1,16 +1,16 @@
 <template>
   <modal-base ref="modalBaseRef" :active="active" :destroyed="destroy">
-    <div class="sm:flex sm:items-start">
+    <div class="sm:flex sm:items-center">
       <div
         :class="typeColors[type]"
-        class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10">
+        class="mx-auto flex-shrink-0 self-start flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10">
         <Icon icon="mdi-check" v-if="type === 'success'" class="h-5 w-5 text-green-500" />
         <Icon icon="bi-info-lg" v-if="type === 'info'" class="h-5 w-5 text-blue-500" />
         <Icon icon="mdi-exclamation-thick" v-if="type === 'danger'" class="h-5 w-5 text-red-500" />
         <Icon icon="mdi-exclamation-thick" v-if="type === 'warning'" class="h-5 w-5 text-yellow-500" />
       </div>
       <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-        <h3 v-if="title" class="mb-2 text-lg leading-6 font-medium text-gray-900 dark:text-gray-300" id="modal-headline">
+        <h3 v-if="title" class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300" id="modal-headline">
           {{ title }}
         </h3>
         <p v-if="body" class="text-sm leading-5" v-html="body"></p>
