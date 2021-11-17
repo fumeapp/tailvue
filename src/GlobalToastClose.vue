@@ -1,6 +1,6 @@
 <template>
   <div class="ml-4 flex-shrink-0 flex">
-    <button @click="close" class="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+    <button @click="close" class="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
       <span class="sr-only">Close</span>
       <Icon icon="mdi-close-thick" class="w-4 h-4" />
     </button>

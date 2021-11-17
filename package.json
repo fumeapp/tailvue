@@ -44,6 +44,7 @@
     "@nuxt/kit": "^0.7.0-edge",
     "@types/node": "^16.11.7",
     "@vitejs/plugin-vue": "^1.9.4",
+    "@vueuse/core": "^6.9.1",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.11",
     "simple-syntax-highlighter": "^2.2.0",

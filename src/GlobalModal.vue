@@ -10,7 +10,7 @@
         <Icon icon="mdi-exclamation-thick" v-if="type === 'warning'" class="h-5 w-5 text-yellow-500" />
       </div>
       <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-        <h3 v-if="title" class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300" id="modal-headline">
+        <h3 v-if="title" class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300 mb-1" id="modal-headline">
           {{ title }}
         </h3>
         <p v-if="body" class="text-sm leading-5" v-html="body"></p>

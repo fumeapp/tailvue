@@ -29,5 +29,4 @@
 </template>
 <script lang="ts" setup>
 import PushButton from '../../src/PushButton.vue'
-
 </script>
