@@ -8,7 +8,7 @@
 - 🌔 All components and classes include dark-mode support
 - 🔌 Programmatic toasts
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-demo.gif" alt="toasts">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-demo.gif" width="500" alt="toasts">
 </p>
 
 ```ts
@@ -16,7 +16,7 @@ $toast.show('this is a test');
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-singleaction.gif" alt="toasts-single-action">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-singleaction.gif" width="500" alt="toasts-single-action">
 </p>
 
 ```ts
@@ -33,7 +33,7 @@ $toast.show({
 
 - 🔌 Programmatic modals
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/modal-demo.gif" alt="modals">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/modal-demo.gif" width="500" alt="modals">
 </p>
 
 ```ts
@@ -73,7 +73,7 @@ yarn add --dev @tailvue/nuxt
 ```ts
 buildModules: [
     '@tailvue/nuxt',
-    ...,
+    ...
 ],
 ```
 
@@ -95,7 +95,7 @@ yarn add --dev @iconify/vue
 ```
 
 ### WindiCSS
-* Install [WindiCSS](https://windicss.org/) as you normally would
+* Install [WindiCSS](https://windicss.org/)
 * Add the following to your `window.config.ts`
 ```ts
 export default defineConfig({
@@ -108,7 +108,7 @@ export default defineConfig({
 ```
 
 ### tailwindcss
-* Install [tailwindcss](https://tailwindcss.org/) as you normally would
+* Install [tailwindcss](https://tailwindcss.org/)
 * Add the following to your `tailwind.config.js`
 ```js
 module.exports = {
