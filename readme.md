@@ -89,7 +89,32 @@ const $modal = useModal()
 ```
 
 ### Icons
-* All Icons supplied using the [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
+* All Icons are being displayed using [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
 ```bash
 yarn add --dev @iconify/vue
+```
+
+### WindiCSS
+* Install [WindiCSS](https://windicss.org/) as you normally would
+* Add the following to your `window.config.ts`
+```ts
+export default defineConfig({
+  extract: {
+    include: [
+      ...
+      "node_modules/tailvue/dist/tailvue.es.js",
+    ],
+  },
+```
+
+### tailwindcss
+* Install [tailwindcss](https://tailwindcss.org/) as you normally would
+* Add the following to your `tailwind.config.js`
+```js
+module.exports = {
+  content: [
+    ...
+      "node_modules/tailvue/dist/tailvue.es.js",
+  ],
+}
 ```
