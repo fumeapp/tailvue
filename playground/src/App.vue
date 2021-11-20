@@ -1,10 +1,12 @@
 <template>
-  <nav class="bg-white">
+  <nav class="bg-gray-200 dark:bg-gray-700">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center">
-          <img src="https://avatars.githubusercontent.com/u/79109951?s=200&v=4" class="w-8 h-8" alt="windicss logo">
           <Icon icon="logos-vue" class="w-8 h-8" />
+          <Icon icon="mdi-plus" class="w-8 h-8" />
+          <img src="https://avatars.githubusercontent.com/u/79109951?s=200&v=4" class="w-8 h-8" alt="windicss logo">
+          <div class="w-0.5 h-8 bg-gray-600 dark:bg-gray-300 mx-2" />
           <Icon icon="logos-tailwindcss-icon" class="w-8 h-8" />
         </div>
         <button @click="toggleDark" class="text-gray-800 dark:text-white">
