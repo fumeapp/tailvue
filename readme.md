@@ -16,7 +16,7 @@ $toast.show('this is a test');
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-singleaction.gif" alt="toasts">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-singleaction.gif" alt="toasts-single-action">
 </p>
 
 ```ts
@@ -33,7 +33,7 @@ $toast.show({
 
 - 🔌 Programmatic modals
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/modal-demo.gif" alt="toasts">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/modal-demo.gif" alt="modals">
 </p>
 
 ```ts
@@ -54,4 +54,9 @@ $modal.show({
 })
 ```
 
+- 🎪 Interactive playground! - just run `yarn; yarn dev`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/playground.png" alt="playground">
+</p>
 
+- ✨ Tons of other components that will be documented shortly!
