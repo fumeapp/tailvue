@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/logo.png" width="300" alt="tailvue">
   <br />
-  Vue components built for Vue3 powered by Windi CSS | tailwindcss
+  Vue components built for Vue3 powered by Windi CSS or tailwindcss
 </p>
 
 ## 🚀 Features
@@ -60,3 +60,30 @@ $modal.show({
 </p>
 
 - ✨ Tons of other components that will be documented shortly!
+
+
+## Installation
+
+### NuxtJS v3
+```bash
+yarn add --dev @tailvue/nuxt
+```
+
+* Add this to your `nuxt.config.ts`
+```ts
+buildModules: [
+    '@tailvue/nuxt',
+    ...,
+],
+```
+
+### Vue3
+```bash
+yarn add tailvue
+```
+
+```ts
+import { useToast, useModal } from 'tailvue'
+const $toast = useToast()
+const $modal = useModal()
+```
