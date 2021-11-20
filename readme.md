@@ -87,3 +87,9 @@ import { useToast, useModal } from 'tailvue'
 const $toast = useToast()
 const $modal = useModal()
 ```
+
+### Icons
+* All Icons supplied using the [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
+```bash
+yarn add --dev @iconify/vue
+```
