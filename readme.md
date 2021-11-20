@@ -19,6 +19,7 @@ $toast.show('this is a test');
   <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/toast-singleaction.gif" alt="toasts">
 </p>
 ```ts
+
 $toast.show({
   type: 'danger',
   message: 'single action toast',
