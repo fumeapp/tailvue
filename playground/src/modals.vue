@@ -14,7 +14,6 @@
   </ssh-pre>
   <push-button @click="test">$modal.show('this is a test')</push-button>
   <push-button @click="danger">danger modal</push-button>
-  <!--
   <ssh-pre language="js" copy-button dark>
   <pre>
 $modal.show({
@@ -37,7 +36,6 @@ $modal.show({
       <icon icon="mdi-content-copy">copy</icon>
     </template>
   </ssh-pre>
-  -->
   <modal-base v-if="modal" :destroyed="() => modal = false">
     <div class="flex items-center justify-center p-12">
       this is a modal
