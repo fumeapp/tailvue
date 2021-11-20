@@ -89,7 +89,7 @@ const $modal = useModal()
 ```
 
 ### Icons
-* All Icons are being displayed using [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
+* All Icons are brought in via the [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
 ```bash
 yarn add --dev @iconify/vue
 ```
