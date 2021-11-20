@@ -1,10 +1,11 @@
 <template>
-  <nav class="bg-gray-200 dark:bg-gray-700">
+  <nav class="bg-white">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center">
+          <img src="https://avatars.githubusercontent.com/u/79109951?s=200&v=4" class="w-8 h-8" alt="windicss logo">
           <Icon icon="logos-vue" class="w-8 h-8" />
-          <Icon icon="logos-tailwindcss-icon" class="w-8 h-8 -ml-4" />
+          <Icon icon="logos-tailwindcss-icon" class="w-8 h-8" />
         </div>
         <button @click="toggleDark" class="text-gray-800 dark:text-white">
           <icon icon="carbon-moon" v-if="isDark" class="w-6 h-6" />
@@ -48,7 +49,7 @@ const toggleDark = useToggle(isDark)
 
 <style>
 html, body {
-  @apply bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+  @apply bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 min-h-screen
 }
 .ssh-pre {
   @apply max-w-md whitespace-nowrap overflow-scroll
