@@ -1,17 +1,17 @@
 import { TailvueModal } from './types/modal'
 import { TailvueToast } from './types/toast'
 import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './types/push-button'
-import { DefineComponent } from 'vue'
+import { DefineComponent, PropType } from 'vue'
 
 export * from './types/modal'
 export * from './types/push-button'
 export * from './types/toast'
 
 declare const PushButton: DefineComponent<{
-  state?: PushButtonState
-  size?: PushButtonSize
-  theme?: PushButtonThemeName
-  customTheme?: PushButtonTheme
+  state?: PropType<PushButtonState>
+  size?: PropType<PushButtonSize>
+  theme?: PropType<PushButtonThemeName>
+  customTheme?: PropType<PushButtonTheme>
 }>
 
 declare const ModalBase: DefineComponent<{
