@@ -8,10 +8,10 @@ export * from './types/push-button'
 export * from './types/toast'
 
 declare const PushButton: DefineComponent<{
-  state?: PropType<PushButtonState>
-  size?: PropType<PushButtonSize>
-  theme?: PropType<PushButtonThemeName>
-  customTheme?: PropType<PushButtonTheme>
+  state: PropType<PushButtonState>
+  size: PropType<PushButtonSize>
+  theme: PropType<PushButtonThemeName>
+  customTheme: PropType<PushButtonTheme>
 }>
 
 declare const ModalBase: DefineComponent<{
