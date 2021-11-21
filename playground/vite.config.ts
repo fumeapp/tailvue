@@ -10,8 +10,8 @@ export default defineConfig({
         darkMode: 'class', // or 'media' or 'class'
         extract: {
           include: [
-            '../src/**/*.{vue,ts}',
-            './playground/**/*.{vue,ts}',
+            'src/**.{vue,ts}',
+            '../src/**.{vue,ts}',
           ],
         }
       }
