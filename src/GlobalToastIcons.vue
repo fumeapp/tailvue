@@ -1,21 +1,21 @@
 <template>
-  <div v-if="props.type === 'success'" class="border-2 border-green-200 rounded-full p-1">
-    <Icon icon="mdi-check"  class="h-3 w-3 text-green-400" />
+  <div v-if="props.type === 'success'" class="border-2 border-green-200 rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon icon="mdi-check"  class="h-4 w-4 text-green-400" />
   </div>
-  <div v-else-if="props.type === 'info'" class="border-2 border-blue-200 rounded-full p-1">
-    <Icon icon="bi-info-lg"  class="h-3 w-3 text-blue-400" />
+  <div v-else-if="props.type === 'info'" class="border-2 border-blue-200 rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon icon="bi-info-lg"  class="h-4 w-4 text-blue-400" />
   </div>
-  <div v-else-if="props.type === 'warning'" class="border-2 border-yellow-200 rounded-full p-1">
-    <Icon icon="mdi-exclamation-thick" class="h-3 w-3 text-yellow-400" />
+  <div v-else-if="props.type === 'warning'" class="border-2 border-yellow-200 rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon icon="mdi-exclamation-thick" class="h-4 w-4 text-yellow-400" />
   </div>
-  <div v-else-if="props.type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
-    <Icon icon="mdi-exclamation-thick" class="h-3 w-3 text-red-400" />
+  <div v-else-if="props.type === 'danger'" class="border-2 border-red-200 rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon icon="mdi-exclamation-thick" class="h-4 w-4 text-red-400" />
   </div>
-  <div v-else-if="props.type === 'denied'" class="rounded-full">
-    <Icon icon="mdi-cancel" class="h-3 w-3 text-red-400" />
+  <div v-else-if="props.type === 'denied'" class="rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon icon="mdi-cancel" class="h-4 w-4 text-red-400" />
   </div>
-  <div v-else class="rounded-full">
-    <Icon :icon="type" class="h-3 w-3 text-red-400" />
+  <div v-else class="rounded-full w-6 h-6 flex items-center justify-center">
+    <Icon :icon="type" class="h-4 w-4 text-red-400" />
   </div>
 </template>
 

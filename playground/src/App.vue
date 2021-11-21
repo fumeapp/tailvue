@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-gray-200 dark:bg-gray-700">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
+    <div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16 p-4">
         <div class="flex items-center">
           <Icon icon="logos-vue" class="w-8 h-8" />
           <Icon icon="mdi-plus" class="w-8 h-8" />
