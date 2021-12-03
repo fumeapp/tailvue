@@ -18,7 +18,11 @@ export type PushButtonThemeName =
   'red' |
   'yellow' |
   'green' |
+  'emerald' |
+  'teal' |
+  'cyan' |
   'blue' |
+  'light-blue' |
   'purple' |
   'pink'
 export type PushButtonState = 'active'|'loading'|'disabled'
