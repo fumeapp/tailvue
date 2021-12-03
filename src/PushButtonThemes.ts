@@ -71,9 +71,33 @@ export const themes: PushButtonThemes = [
     disabled: '',
   },
   {
+    name: 'emerald',
+    primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-emerald-600',
+    active: 'hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 focus:shadow-outline-emerald active:bg-emerald-700',
+    disabled: '',
+  },
+  {
+    name: 'teal',
+    primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-teal-600',
+    active: 'hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 focus:shadow-outline-teal active:bg-teal-700',
+    disabled: '',
+  },
+  {
     name: 'blue',
     primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-blue-600',
     active: 'hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:shadow-outline-blue active:bg-blue-700',
+    disabled: '',
+  },
+  {
+    name: 'light-blue',
+    primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-light-blue-600',
+    active: 'hover:bg-light-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500 focus:shadow-outline-light-blue active:bg-light-blue-700',
+    disabled: '',
+  },
+  {
+    name: 'cyan',
+    primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-cyan-600',
+    active: 'hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 focus:shadow-outline-cyan active:bg-cyan-700',
     disabled: '',
   },
   {
