@@ -1,6 +1,6 @@
 {
   "name": "@tailvue/nuxt",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "description": "Nuxt module for tailvue",
   "private": false,
   "keywords": [
