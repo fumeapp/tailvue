@@ -23,7 +23,7 @@
                 <p v-if="title" class="text-sm leading-5 font-medium">{{ title }}</p>
                 <p :class="{'mt-1': title}" class="text-sm leading-5" v-html="message"></p>
               </div>
-              <div class="ml-4 flex-shrink-0 flex">
+              <div class="ml-4 flex-shrink-0 flex mt-0.5">
                 <global-toast-close  @close="destroy(true)"/>
               </div>
             </div>
