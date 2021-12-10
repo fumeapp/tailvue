@@ -1,5 +1,5 @@
 export interface PushButtonTheme {
-  name: PushButtonThemeName
+  name?: PushButtonThemeName
   primary: string
   active: string
   dark?: string
