@@ -110,8 +110,6 @@ const props = defineProps({
   },
   message: {
     type: String,
-    required: false,
-    default: 'Please specify a <b>message</b>',
   },
   type: {
     type: String as PropType<ToastType>,

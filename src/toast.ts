@@ -1,7 +1,7 @@
 import GlobalToast from './GlobalToast.vue'
 import { spawn } from './utils'
 import { ComponentOptionsWithObjectProps } from 'vue'
-import { TailvueToast } from './types/toast'
+import { TailvueToast, ToastProps } from './types/toast'
 
 const outerClasses = [
   'z-40', 'fixed',  'inset-0', 'flex',  'sm:items-start',
@@ -28,6 +28,7 @@ export function useToast(): TailvueToast {
   return {
     show (props: ToastProps|string) {
       if (typeof props === 'string') props = { message: props }
+      if (props === undefined) return
       return spawn('toasts', props, GlobalToast as unknown as ComponentOptionsWithObjectProps, elClasses)
     },
     success (message: string) {
