@@ -9,6 +9,12 @@ export const themes: PushButtonThemes = [
     disabled: '',
   },
   {
+    name: 'dark',
+    primary: 'border border-gray-600 shadow-sm font-medium rounded text-gray-400 bg-gray-700',
+    active: 'hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ring-offset-gray-800',
+    disabled: '',
+  },
+  {
     name: 'white-left',
     primary: 'border border-gray-300 shadow-sm font-medium rounded-l-md text-gray-700 bg-white',
     dark: 'dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:dark:bg-gray-500 dark:ring-offset-gray-800',

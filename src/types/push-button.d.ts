@@ -8,6 +8,7 @@ export interface PushButtonTheme {
 export type PushButtonThemes = PushButtonTheme[]
 export type PushButtonThemeName =
   'white' |
+  'dark' |
   'white-left' |
   'white-mid' |
   'white-right' |
