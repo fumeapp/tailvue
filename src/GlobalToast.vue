@@ -11,7 +11,8 @@
     >
       <div
         v-if="active && !primary"
-        class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+        :class="{'max-w-sm': !wide, 'max-w-3xl': wide}"
+        class="relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
         <global-toast-progress v-if="progress && timeout" :style="progressStyle" />
         <div class="rounded-lg shadow-xs overflow-hidden z-100">
           <div class="p-4">
@@ -30,7 +31,11 @@
           </div>
         </div>
       </div>
-      <div v-else-if="active && primary && secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+      <div
+        v-else-if="active && primary && secondary"
+        :class="{'max-w-sm': !wide, 'max-w-3xl': wide}"
+        class="relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden"
+      >
         <global-toast-progress v-if="progress && timeout" :style="progressStyle" />
         <div class="flex rounded-lg shadow-xs divide-x divide-gray-200 dark:divide-gray-600">
           <div class="w-0 flex-1 flex items-start p-4">
@@ -64,7 +69,11 @@
           </div>
         </div>
       </div>
-      <div v-else-if="active && primary && !secondary" class="max-w-sm relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+      <div
+        v-else-if="active && primary && !secondary"
+        :class="{'max-w-sm': !wide, 'max-w-3xl': wide}"
+        class="relative w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden"
+      >
         <global-toast-progress v-if="progress && timeout" :style="progressStyle" />
         <div class="rounded-lg shadow-xs overflow-hidden">
           <div class="p-4">
@@ -128,6 +137,7 @@ const props = defineProps({
   },
   primary: Object as PropType<ToastAction>,
   secondary: Object as PropType<ToastAction>,
+  wide: Boolean,
 })
 const toastRef = ref<HTMLElement|undefined>(undefined)
 const active = ref(false)

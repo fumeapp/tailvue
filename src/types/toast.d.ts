@@ -22,6 +22,8 @@ export interface ToastProps {
   secondary?: ToastAction
   /** Specify false for no icon, or pass an iconify.design name */
   icon?: boolean|string
+  /** make your toast wider for mode detailed info */
+  wide?: boolean
 }
 
 export interface TailvueToast {
