@@ -46,7 +46,7 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@nuxt/kit-edge": "^3.0.0-27283410.c53b6a5",
+    "@nuxt/kit-edge": "^3.0.0-27338323.1e98259",
     "pathe": "^0.2.0",
     "tailvue": "^0.1.30"
   },
@@ -54,7 +54,7 @@
     "tailvue": "workspace:*"
   },
   "devDependencies": {
-    "unbuild": "^0.5.10"
+    "unbuild": "^0.6.7"
   },
   "publishConfig": {
     "access": "public"
