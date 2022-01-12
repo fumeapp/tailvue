@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+      "editorconfig.editorconfig",
+      "donjayamanne.githistory",
+      "eamodio.gitlens",
+      "ms-vscode.vscode-typescript-next",
+      "johnsoncodehk.volar",
+      "henrynguyen5-vsc.vsc-nvm",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+  ]
+}
