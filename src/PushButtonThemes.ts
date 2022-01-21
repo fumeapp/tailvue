@@ -4,7 +4,7 @@ export const themes: PushButtonThemes = [
   {
     name: 'white',
     primary: 'border border-gray-300 shadow-sm font-medium rounded text-gray-700 bg-white',
-    dark: 'dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:dark:bg-gray-500 dark:ring-offset-gray-800',
+    dark: 'dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:dark:bg-gray-600 dark:ring-offset-gray-800',
     active: 'hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
     disabled: '',
   },
