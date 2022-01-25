@@ -8,34 +8,10 @@ export const themes: FormToggleThemes = [
     focus: 'focus:ring-blue-300',
   },
   {
-    name: 'slate',
-    outer: 'bg-slate-700',
-    inner: 'bg-slate-500',
-    focus: 'focus:ring-slate-300',
-  },
-  {
     name: 'gray',
     outer: 'bg-gray-700',
     inner: 'bg-gray-500',
     focus: 'focus:ring-gray-300',
-  },
-  {
-    name: 'zinc',
-    outer: 'bg-zinc-700',
-    inner: 'bg-zinc-500',
-    focus: 'focus:ring-zinc-300',
-  },
-  {
-    name: 'neutral',
-    outer: 'bg-neutral-700',
-    inner: 'bg-neutral-500',
-    focus: 'focus:ring-neutral-300',
-  },
-  {
-    name: 'stone',
-    outer: 'bg-stone-700',
-    inner: 'bg-stone-500',
-    focus: 'focus:ring-stone-300',
   },
   {
     name: 'red',
@@ -139,4 +115,29 @@ export const themes: FormToggleThemes = [
     inner: 'bg-rose-500',
     focus: 'focus:ring-rose-300',
   },
+  // NOT ON WINDI YET
+  // {
+  //   name: 'slate',
+  //   outer: 'bg-slate-700',
+  //   inner: 'bg-slate-500',
+  //   focus: 'focus:ring-slate-300',
+  // },
+  // {
+  //   name: 'zinc',
+  //   outer: 'bg-zinc-700',
+  //   inner: 'bg-zinc-500',
+  //   focus: 'focus:ring-zinc-300',
+  // },
+  // {
+  //   name: 'neutral',
+  //   outer: 'bg-neutral-700',
+  //   inner: 'bg-neutral-500',
+  //   focus: 'focus:ring-neutral-300',
+  // },
+  // {
+  //   name: 'stone',
+  //   outer: 'bg-stone-700',
+  //   inner: 'bg-stone-500',
+  //   focus: 'focus:ring-stone-300',
+  // },
 ]

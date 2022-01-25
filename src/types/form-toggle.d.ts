@@ -7,11 +7,7 @@ export interface FormToggleTheme {
 export type FormToggleThemes = FormToggleTheme[]
 export type FormToggleThemeName =
   'white' |
-  'slate' |
   'gray' |
-  'zinc' |
-  'neutral' |
-  'stone' |
   'red' |
   'orange' |
   'amber' |
@@ -29,6 +25,11 @@ export type FormToggleThemeName =
   'fuchsia' |
   'pink' |
   'rose'
+  // NOT ON WINDI YET
+  // 'slate' |
+  // 'zinc' |
+  // 'neutral' |
+  // 'stone' |
 
 export type FormToggleSizeLabel = 'xs'| 's'| 'm'| 'l'| 'xl'
 export interface FormToggleSize {
