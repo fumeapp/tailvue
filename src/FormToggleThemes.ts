@@ -3,8 +3,8 @@ import { FormToggleThemes } from './types/form-toggle'
 export const themes: FormToggleThemes = [
   {
     name: 'white',
-    outer: 'bg-white',
-    inner: 'bg-gray-300',
+    outer: 'bg-white dark:bg-gray-700',
+    inner: 'bg-gray-300 dark:bg-gray-500',
     focus: 'focus:ring-blue-300',
   },
   {
