@@ -8,7 +8,7 @@
       {
         'cursor-not-allowed': disabled
       },
-      sizeClasses.button,
+      currentSize.button,
       currentTheme.outer,
       currentTheme.focus,
     ]"
@@ -17,7 +17,7 @@
     <span class="sr-only">Use setting</span>
     <span
       class="relative inline-block rounded-full shadow transform ring-0 transition ease-in-out duration-200"
-      :class="[currentTheme.inner, value ? sizeClasses.translate : 'translate-x-0', sizeClasses.span]"
+      :class="[currentTheme.inner, value ? currentSize.translate : 'translate-x-0', currentSize.span]"
     >
       <span
         class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
@@ -45,7 +45,7 @@
 
 <script lang="ts" setup>
 import { computed, PropType } from 'vue'
-import { FormToggleSizeLabel, FormToggleSizes, FormToggleTheme, FormToggleThemeName } from './types/form-toggle';
+import { FormToggleSizeLabel, FormToggleSizes, FormToggleSize, FormToggleTheme, FormToggleThemeName } from './types/form-toggle';
 import { themes } from './FormToggleThemes'
 
 const emit = defineEmits(['toggle'])
@@ -102,7 +102,7 @@ const sizes: FormToggleSizes = [
   },
 ]
 
-const sizeClasses = computed(() => {
+const currentSize = computed((): FormToggleSize => {
   return sizes.find(s => s.name === props.size)
 })
 
