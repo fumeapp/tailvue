@@ -1,13 +1,29 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import FormToggle from '../../src/FormToggle.vue'
+
+const t1Value = ref(true)
+const t2Value = ref(false)
+
+const onToggle1 = (val: boolean) => {
+  t1Value.value = val
+}
+const onToggle2 = (val: boolean) => {
+  t2Value.value = val
+}
 </script>
 
 <template>
   <!-- Default -->
-  <form-toggle />
+  <form-toggle
+    :value="t1Value"
+    :theme="'lime'"
+    :size="'xl'"
+    @toggle="onToggle1"
+  />
 
   <!-- With Custom Icon -->
-  <form-toggle>
+  <form-toggle :value="t2Value" @toggle="onToggle2">
     <template #icon-on>
       <div class="flex items-center rounded">
         <span class="w-3 h-3">
