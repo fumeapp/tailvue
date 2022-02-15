@@ -60,7 +60,8 @@
     "@nuxt/module-builder": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "eslint": "latest",
-    "nuxt3": "latest"
+    "nuxt3": "latest",
+    "unbuild": "^0.6.7"
   },
   "publishConfig": {
     "access": "public"
