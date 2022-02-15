@@ -1,6 +1,10 @@
 
 export type ToastType = 'success'|'info'|'danger'|'warning'|'denied'
 
+export interface ToastTheme {
+  outer: string
+}
+
 export interface ToastAction {
   /* Button Label */
   label: string

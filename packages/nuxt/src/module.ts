@@ -8,7 +8,13 @@ import { resolve } from 'pathe'
 import { distDir } from './dirs'
 
 export default defineNuxtModule<TailvueOptions>({
-  name: 'tailvue',
+  meta: {
+    name: 'tailvue',
+    configKey: 'tailvue'
+  },
+  defaults: {
+    addPlugin: true
+  },
   setup () {
     addPluginTemplate({
       filename: 'plugin.mjs',

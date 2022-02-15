@@ -1,6 +1,6 @@
 {
   "name": "tailvue",
-  "version": "0.1.52",
+  "version": "0.1.56",
   "description": "windicss and tailwindcss components for Vue",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
@@ -41,13 +41,13 @@
   },
   "devDependencies": {
     "@iconify/vue": "^3.1.0",
-    "@nuxt/kit": "^0.7.0-edge",
-    "@types/node": "^16.11.7",
-    "@vitejs/plugin-vue": "^1.9.4",
-    "@vueuse/core": "^6.9.1",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@types/node": "^17.0.18",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vueuse/core": "^7.6.2",
     "simple-syntax-highlighter": "^2.2.0",
     "tsup": "^5.7.0",
-    "unbuild": "^0.5.11",
+    "unbuild": "^0.6.9",
     "vite": "^2.6.14",
     "vite-plugin-windicss": "^1.5.1",
     "windicss": "^3.2.1"
