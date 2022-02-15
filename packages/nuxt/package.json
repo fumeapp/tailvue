@@ -1,6 +1,6 @@
 {
   "name": "@tailvue/nuxt",
-  "version": "0.1.56",
+  "version": "0.1.57",
   "description": "Nuxt module for tailvue",
   "private": false,
   "keywords": [
@@ -37,10 +37,7 @@
   "module": "./dist/module.mjs",
   "types": "./dist/runtime/plugin.d.ts",
   "files": [
-    "dist/*.cjs",
-    "module.cjs",
-    "dist/runtime/*.mjs",
-    "dist/runtime/*.d.ts"
+    "dist"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
