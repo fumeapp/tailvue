@@ -10,6 +10,10 @@ import { distDir } from './dirs'
 export default defineNuxtModule<TailvueOptions>({
   meta: {
     name: 'tailvue',
+    configKey: 'tailvue'
+  },
+  defaults: {
+    addPlugin: true
   },
   setup () {
     addPluginTemplate({
