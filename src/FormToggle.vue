@@ -9,7 +9,7 @@
         'cursor-not-allowed': disabled
       },
       currentSize.button,
-      currentTheme.outer,
+      value ? currentTheme.outer : 'bg-current',
       currentTheme.focus,
     ]"
     @click="choose"
