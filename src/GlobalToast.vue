@@ -51,7 +51,7 @@
             <div class="flex flex-col divide-y divide-gray-200 dark:divide-gray-600">
               <div class="h-0 flex-1 flex">
                 <button
-                  class="w-full border border-transparent rounded-none rounded-tr-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 focus:outline-none focus:z-10 focus:ring-2 focus:ring-indigo-500"
+                  class="w-full border border-transparent rounded-none rounded-tr-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-gray-500 focus:outline-none focus:z-10 focus:ring-2 focus:ring-gray-500"
                   @click="primaryAction"
                 >
                   {{ primary.label }}
@@ -59,7 +59,7 @@
               </div>
               <div class="h-0 flex-1 flex">
                 <button
-                  class="w-full border border-transparent rounded-none rounded-br-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="w-full border border-transparent rounded-none rounded-br-lg px-4 py-3 flex items-center justify-center text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
                   @click="secondaryAction"
                 >
                   {{ secondary.label }}
@@ -85,7 +85,7 @@
                 <p class="w-0 flex-1 text-sm leading-5" v-html="message"></p>
                 <button
                   type="button"
-                  class="ml-3 flex-shrink-0 rounded-md text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="ml-3 flex-shrink-0 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                   @click="primaryAction"
                 >{{ primary.label }}</button>
               </div>

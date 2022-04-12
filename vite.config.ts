@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'tailvue',
-      fileName: (format) => `tailvue.${format}.js`
+      fileName: (format) => `tailvue.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
