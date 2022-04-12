@@ -1,4 +1,4 @@
-import { App, Plugin } from 'vue';
+import { App, Plugin } from 'vue'
 import PushButton from './PushButton.vue'
 import ModalBase from './ModalBase.vue'
 import { useModal } from './modal'
