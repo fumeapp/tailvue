@@ -63,7 +63,7 @@ const props = defineProps({
 })
 const active = ref(false)
 onMounted(() => active.value = true)
-onKeyStroke('Escape', (e) => {
+onKeyStroke('Escape', (e: KeyboardEvent) => {
   e.preventDefault()
   destroy()
 })
