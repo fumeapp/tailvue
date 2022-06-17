@@ -41,6 +41,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
+import { onKeyStroke } from '@vueuse/core'
 import { Icon } from '@iconify/vue'
 
 const props = defineProps({
@@ -62,6 +63,10 @@ const props = defineProps({
 })
 const active = ref(false)
 onMounted(() => active.value = true)
+onKeyStroke('Escape', (e: KeyboardEvent) => {
+  e.preventDefault()
+  destroy()
+})
 async function destroy() {
   active.value = false
   setTimeout(() => props.destroyed(), 200)
