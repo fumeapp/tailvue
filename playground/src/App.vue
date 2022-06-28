@@ -28,7 +28,7 @@
     <div
       class="flex flex-col items-stretch px-6 space-y-4 md:flex-row md:space-x-4 md:space-y-0"
     >
-      <!-- <div class="flex flex-col items-start space-y-4">
+      <div class="flex flex-col items-start space-y-4">
         <h2 class="text-lg">PushButton</h2>
         <buttons />
       </div>
@@ -39,7 +39,7 @@
       <div class="flex flex-col items-start space-y-4">
         <h2 class="text-lg">Toasts</h2>
         <toasts />
-      </div> -->
+      </div>
       <div class="flex flex-col items-start space-y-4">
         <h2 class="text-lg">Tour / OnBoarding</h2>
         <tour />
