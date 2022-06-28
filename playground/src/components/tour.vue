@@ -2,11 +2,11 @@
   <div>
     <AppTour ref="appTour" :steps="steps" :options="options" />
     <h1 id="one">One</h1>
-    <!-- <h1 id="two">Two</h1>
-    <h1 id="three">Three</h1> -->
+    <h1 id="two">Two</h1>
+    <h1 id="three">Three</h1>
     <div>
       <push-button @click="demo">See Demo</push-button>
-      <!-- <push-button @click="restart">Restart Demo</push-button> -->
+      <push-button @click="restart">Restart Demo</push-button>
     </div>
   </div>
 </template>
