@@ -1,6 +1,6 @@
 import { PushButtonThemeName } from './push-button'
 
-export type ModalType = 'success'|'info'|'danger'|'warning'
+export type ModalType = 'success' | 'info' | 'danger' | 'warning'
 
 export interface ModalButton {
   label: string
@@ -17,5 +17,5 @@ export interface ModalProps {
 }
 
 export interface TailvueModal {
-  show(props: ModalProps|string): void
+  show(props: ModalProps | string): void
 }

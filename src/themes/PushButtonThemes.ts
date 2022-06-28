@@ -1,4 +1,4 @@
-import { PushButtonThemes } from './types/push-button'
+import { PushButtonThemes } from '../types/push-button'
 
 export const themes: PushButtonThemes = [
   {

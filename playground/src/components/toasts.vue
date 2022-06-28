@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts" setup>
-import PushButton from '../../src/PushButton.vue'
-import { useToast } from '../../src'
+import PushButton from '../../../src/components/PushButton.vue'
+import { useToast } from '../../../src/composables/useToast'
 const $toast = useToast()
 function test() {
   $toast.show('this is a test')
@@ -29,8 +29,8 @@ function single() {
     timeout: 6,
     primary: {
       label: 'UNDO',
-      action: () => $toast.show('you clicked UNDO')
-    }
+      action: () => $toast.show('you clicked UNDO'),
+    },
   })
 }
 
@@ -41,12 +41,12 @@ function double() {
     message: 'dual action toast',
     primary: {
       label: 'OK',
-      action: () => $toast.success('you clicked OK')
+      action: () => $toast.success('you clicked OK'),
     },
     secondary: {
       label: 'Cancel',
-      action: () => $toast.warning('you clicked Cancel')
-    }
+      action: () => $toast.warning('you clicked Cancel'),
+    },
   })
 }
 

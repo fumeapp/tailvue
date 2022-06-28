@@ -1,11 +1,16 @@
+import { DefineComponent, PropType } from '@vue/runtime-core'
+
 import { TailvueModal } from './types/modal'
 import { TailvueToast } from './types/toast'
+import { AppTour } from './types/tour'
+
 import { PushButtonSize, PushButtonState, PushButtonTheme, PushButtonThemeName } from './types/push-button'
-import { DefineComponent, PropType } from 'vue'
+import { TourStep, TourOptions } from './types/tour'
 
 export * from './types/modal'
 export * from './types/push-button'
 export * from './types/toast'
+export * from './types/tour'
 
 declare const PushButton: DefineComponent<{
   state: PropType<PushButtonState>
@@ -18,8 +23,28 @@ declare const ModalBase: DefineComponent<{
   destroyed: PropType<() => void>
 }>
 
-declare function install(): void;
-declare function useModal(): TailvueModal;
-declare function useToast(): TailvueToast;
+declare const AppTour: DefineComponent<{
+  steps: PropType<TourStep[]>
+  options: PropType<TourOptions>
+  slotControl: PropType<boolean>
+}>
 
-export { PushButton, ModalBase, install, useModal, useToast }
+declare function useModal(): TailvueModal
+declare function useToast(): TailvueToast
+declare function useAppTour(): AppTour
+
+declare function install(): void
+
+export {
+  // Components
+  PushButton,
+  ModalBase,
+  AppTour,
+
+  // Composables
+  useModal,
+  useToast,
+  useAppTour,
+
+  install
+}

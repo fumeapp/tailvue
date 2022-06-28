@@ -5,6 +5,7 @@
 </p>
 
 ## 🚀 Features
+
 - 🌔 All components and classes include dark-mode support
 - 🔌 Programmatic toasts
 <p align="center">
@@ -12,7 +13,7 @@
 </p>
 
 ```ts
-$toast.show('this is a test');
+$toast.show('this is a test')
 ```
 
 <p align="center">
@@ -26,8 +27,8 @@ $toast.show({
   timeout: 6,
   primary: {
     label: 'UNDO',
-    action: () => $toast.show('you clicked UNDO')
-  }
+    action: () => $toast.show('you clicked UNDO'),
+  },
 })
 ```
 
@@ -54,6 +55,36 @@ $modal.show({
 })
 ```
 
+- 🔌 Onboarding / App Touring
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/25044744/176092388-e7f4ad3a-23bc-4489-adb2-53979984792f.png" width="500" alt="modals">
+</p>
+
+```html
+<template>
+  <div>
+    <AppTour ref="appTour" :steps="steps" />
+    <h1 id="one">One</h1>
+    <div>
+      <push-button @click="demo">See Demo</push-button>
+    </div>
+  </div>
+</template>
+<script lang="ts" setup>
+  const appTour = ref<ComponentPublicInstance<typeof AppTour> | null>(null)
+  const { start } = useAppTour(appTour)
+  const steps: TourStep[] = [
+    {
+      title: 'Test One',
+      description: 'Test One',
+      element: 'h1', // or '#id'
+    },
+  ]
+
+  const demo = () => start()
+</script>
+```
+
 - 🎪 Interactive playground! - just run `yarn; yarn dev`
 <p align="center">
   <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/playground.png" alt="playground">
@@ -61,23 +92,25 @@ $modal.show({
 
 - ✨ Tons of other components that will be documented shortly!
 
-
 ## Installation
 
 ### NuxtJS v3
+
 ```bash
 yarn add --dev @tailvue/nuxt
 ```
 
-* Add this to your `nuxt.config.ts`
+- Add this to your `nuxt.config.ts`
+
 ```ts
-buildModules: [
+modules: [
     '@tailvue/nuxt',
     ...
 ],
 ```
 
 ### Vue3
+
 ```bash
 yarn add tailvue
 ```
@@ -89,14 +122,18 @@ const $modal = useModal()
 ```
 
 ### Icons
-* All Icons are brought in via the [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
+
+- All Icons are brought in via the [Iconify Vue Component](https://docs.iconify.design/icon-components/vue/)
+
 ```bash
 yarn add --dev @iconify/vue
 ```
 
 ### WindiCSS
-* Install [WindiCSS](https://windicss.org/)
-* Add the following to your `window.config.ts`
+
+- Install [WindiCSS](https://windicss.org/)
+- Add the following to your `window.config.ts`
+
 ```ts
 export default defineConfig({
   extract: {
@@ -108,13 +145,12 @@ export default defineConfig({
 ```
 
 ### tailwindcss
-* Install [tailwindcss](https://tailwindcss.org/)
-* Add the following to your `tailwind.config.js`
+
+- Install [tailwindcss](https://tailwindcss.org/)
+- Add the following to your `tailwind.config.js`
+
 ```js
 module.exports = {
-  content: [
-    ...
-      "node_modules/tailvue/dist/tailvue.es.js",
-  ],
+  content: [...'node_modules/tailvue/dist/tailvue.es.js'],
 }
 ```
