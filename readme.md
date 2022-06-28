@@ -103,7 +103,7 @@ yarn add --dev @tailvue/nuxt
 - Add this to your `nuxt.config.ts`
 
 ```ts
-buildModules: [
+modules: [
     '@tailvue/nuxt',
     ...
 ],
