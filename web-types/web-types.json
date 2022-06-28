@@ -10,7 +10,7 @@
       "tags": [
         {
           "name": "PushButton",
-          "aliases": [ ],
+          "aliases": [],
           "description": "This component is used to supply buttons",
           "doc-url": "https://github.com/fumeapp/tailvue/blob/main/src/PushButton.vue",
           "attributes": [

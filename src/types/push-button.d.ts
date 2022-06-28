@@ -5,7 +5,9 @@ export interface PushButtonTheme {
   dark?: string
   disabled?: string
 }
+
 export type PushButtonThemes = PushButtonTheme[]
+
 export type PushButtonThemeName =
   'white' |
   'dark' |
@@ -26,5 +28,7 @@ export type PushButtonThemeName =
   'light-blue' |
   'purple' |
   'pink'
-export type PushButtonState = 'active'|'loading'|'disabled'
-export type PushButtonSize = 'xs'| 's'| 'm'| 'l'| 'xl'
+
+export type PushButtonState = 'active' | 'loading' | 'disabled'
+
+export type PushButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl'

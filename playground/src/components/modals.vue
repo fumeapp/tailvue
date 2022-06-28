@@ -15,7 +15,7 @@
   <push-button @click="test">$modal.show('this is a test')</push-button>
   <push-button @click="danger">danger modal</push-button>
   <ssh-pre language="js" copy-button dark>
-  <pre>
+    <pre>
 $modal.show({
   type: 'danger',
   title: 'This is the title property',
@@ -31,27 +31,27 @@ $modal.show({
     action: () => $toast.show('Clicked Secondary'),
   },
 })
-  </pre>
+  </pre
+    >
     <template #copy-button>
       <icon icon="mdi-content-copy">copy</icon>
     </template>
   </ssh-pre>
-  <modal-base v-if="modal" :destroyed="() => modal = false">
-    <div class="flex items-center justify-center p-12">
-      this is a modal
-    </div>
+  <modal-base v-if="modal" :destroyed="() => (modal = false)">
+    <div class="flex items-center justify-center p-12">this is a modal</div>
   </modal-base>
 </template>
 
 <script lang="ts" setup>
+import { ref } from '@vue/runtime-core'
 import { Icon } from '@iconify/vue'
 import SshPre from 'simple-syntax-highlighter'
 import 'simple-syntax-highlighter/dist/sshpre.css'
-import PushButton from '../../src/PushButton.vue'
-import ModalBase from '../../src/ModalBase.vue'
-import { ref } from 'vue'
-import { useModal } from '../../src'
-import { useToast } from '../../src'
+import PushButton from '../../../src/components/PushButton.vue'
+import ModalBase from '../../../src/components/ModalBase.vue'
+import { useModal } from '../../../src/composables/useModal'
+import { useToast } from '../../../src/composables/useToast'
+
 const modal = ref(false)
 const $modal = useModal()
 const $toast = useToast()
