@@ -15,11 +15,11 @@ declare const PushButton: DefineComponent<{
 }>
 
 declare const ModalBase: DefineComponent<{
-  destroyed: PropType<() => void>
+  destroyed: PropType<Function>
 }>
 
-declare function install(): void;
-declare function useModal(): TailvueModal;
-declare function useToast(): TailvueToast;
+declare function install(): void
+declare function useModal(): TailvueModal
+declare function useToast(): TailvueToast
 
 export { PushButton, ModalBase, install, useModal, useToast }
