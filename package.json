@@ -50,7 +50,7 @@
     "simple-syntax-highlighter": "^2.2.0",
     "tsup": "^5.7.0",
     "unbuild": "^0.6.9",
-    "vite": "~2.7.1",
+    "vite": "~3.1.7",
     "vite-plugin-windicss": "^1.5.1",
     "windicss": "^3.2.1"
   },
