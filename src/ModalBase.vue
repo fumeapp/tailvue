@@ -46,7 +46,7 @@ import { Icon } from '@iconify/vue'
 
 const props = defineProps({
   destroyed: {
-    type: Function,
+    type: [Function, () => undefined],
     required: false,
     default: () => {},
   },
