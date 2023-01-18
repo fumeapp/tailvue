@@ -71,11 +71,14 @@ yarn add --dev @tailvue/nuxt
 
 * Add this to your `nuxt.config.ts`
 ```ts
-buildModules: [
+modules: [
+    // ...
     '@tailvue/nuxt',
-    ...
 ],
 ```
+
+> **Note**
+> If you are using Nuxt 2 you may need to put this in of the `buildModules` array
 
 ### Vue3
 ```bash
