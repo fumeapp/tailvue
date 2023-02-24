@@ -1,6 +1,10 @@
 <template>
   <!-- div class="z-40 fixed inset-0 flex flex-col-reverse items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end'"></div> make sure these dont get purged -->
-  <div ref="toastRef">
+  <div
+    ref="toastRef"
+    @mouseenter="isHovering = true"
+    @mouseleave="isHovering = false"
+  >
     <transition
       enter-active-class="transform ease-out duration-300 transition"
       enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -135,12 +139,18 @@ const props = defineProps({
     required: false,
     default: 2,
   },
+  pauseOnHover: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
   primary: Object as PropType<ToastAction>,
   secondary: Object as PropType<ToastAction>,
   wide: Boolean,
 })
 const toastRef = ref<HTMLElement|undefined>(undefined)
 const active = ref(false)
+const isHovering = ref(false)
 let interval:undefined|number = undefined
 const timeLeft = ref(0)
 const speed = 100
@@ -160,8 +170,10 @@ onMounted(() => {
 })
 
 function updateTime() {
-  timeLeft.value -= speed
-  if (timeLeft.value === 0) destroy()
+  if (!props.pauseOnHover || !isHovering.value) {
+    timeLeft.value -= speed
+    if (timeLeft.value === 0) destroy()
+  }
 }
 
 function destroy  (instant = false) {

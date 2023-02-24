@@ -28,6 +28,7 @@ export interface ToastProps {
   icon?: boolean|string
   /** make your toast wider for mode detailed info */
   wide?: boolean
+  pauseOnHover?: boolean
 }
 
 export interface TailvueToast {
