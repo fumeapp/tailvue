@@ -111,7 +111,7 @@ export default defineConfig({
 ```
 
 ### tailwindcss
-* Install [tailwindcss](https://tailwindcss.org/)
+* Install [tailwindcss](https://tailwindcss.com/)
 * Add the following to your `tailwind.config.js`
 ```js
 module.exports = {
