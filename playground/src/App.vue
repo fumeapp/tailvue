@@ -31,6 +31,10 @@
         <h2 class="text-lg">Toasts</h2>
         <toasts />
       </div>
+      <div class="flex flex-col space-y-4 items-start">
+        <h2 class="text-lg">FormToggles</h2>
+        <toggles />
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +43,7 @@ import { Icon } from '@iconify/vue'
 import Buttons from './buttons.vue'
 import Modals from './modals.vue'
 import Toasts from './toasts.vue'
+import Toggles from './toggles.vue'
 import PushButton from '../../src/PushButton.vue'
 import { useDark, useToggle } from '@vueuse/core'
 
