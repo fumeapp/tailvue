@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+import { Icon } from '@iconify/vue'
+import Buttons from './buttons.vue'
+import Modals from './modals.vue'
+import Toasts from './toasts.vue'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+</script>
+
 <template>
   <nav class="bg-gray-200 dark:bg-gray-700">
     <div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -34,17 +45,6 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup>
-import { Icon } from '@iconify/vue'
-import Buttons from './buttons.vue'
-import Modals from './modals.vue'
-import Toasts from './toasts.vue'
-import PushButton from '../../src/PushButton.vue'
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-</script>
 
 <style>
 html, body {
