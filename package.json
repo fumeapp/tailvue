@@ -1,6 +1,6 @@
 {
   "name": "tailvue",
-  "version": "0.1.68",
+  "version": "1.0.0",
   "description": "windicss, tailwindcss and unocss components for Vue",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
