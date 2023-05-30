@@ -99,16 +99,7 @@ yarn add --dev @iconify/vue
 
 ### UnoCSS
 * Install [UnoCSS](https://unocss.dev/)
-* Add the following to your `uno.config.ts`
-```ts
-export default defineConfig({
-  extract: {
-    include: [
-      ...
-      "node_modules/tailvue/dist/tailvue.es.js",
-    ],
-  },
-```
+* No include is needed for uno, we have added @unocss/include to our generated files
 
 ### tailwindcss
 * Install [tailwindcss](https://tailwindcss.com/)
