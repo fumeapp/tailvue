@@ -7,6 +7,7 @@ import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+const toggling = () => toggleDark()
 </script>
 
 <template>
@@ -20,7 +21,10 @@ const toggleDark = useToggle(isDark)
           <div class="w-0.5 h-8 bg-gray-600 dark:bg-gray-300 mx-2" />
           <Icon icon="logos-tailwindcss-icon" class="w-8 h-8" />
         </div>
-        <button @click="toggleDark" class="text-gray-800 dark:text-white w-8 h-8 flex items-center justify-center rounded-full">
+        <button
+          @click="toggling"
+          class="text-gray-800 dark:text-white w-8 h-8 flex items-center justify-center rounded-full"
+        >
           <icon icon="carbon-moon" v-if="isDark" class="w-6 h-6" />
           <icon icon="carbon-sun" v-else class="w-6 h-6" />
         </button>

@@ -49,7 +49,7 @@ function click(): void {
 <template>
   <button
       type="button"
-      class="relative inline-flex items-center"
+      class="relative inline-flex items-center bg-auto"
       :class="[sizes[size], currentTheme.primary, currentTheme.dark, cursor, isActive ? currentTheme.active : currentTheme.disabled ]"
       @click="click"
   >

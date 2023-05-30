@@ -1,5 +1,6 @@
 import { PushButtonThemes } from './types/push-button'
 
+// @unocss-include
 export const themes: PushButtonThemes = [
   {
     name: 'white',
@@ -54,13 +55,13 @@ export const themes: PushButtonThemes = [
   },
   {
     name: 'indigo-dark',
-    primary: 'text-indigo-200 bg-indigo-900 rounded shadow-sm ',
+    primary: 'text-indigo-200 bg-indigo-900 rounded shadow-sm',
     active: 'hover:bg-indigo-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 active:bg-indigo-800',
     disabled: '',
   },
   {
     name: 'red',
-    primary: 'border border-transparent font-medium rounded shadow-sm text-white bg-red-600',
+    primary: 'bg-red-600 border border-transparent font-medium rounded shadow-sm text-white',
     active: 'hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 focus:shadow-outline-red active:bg-red-700',
     disabled: '',
   },
