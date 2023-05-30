@@ -31,7 +31,8 @@
   },
   "scripts": {
     "dev": "vite playground",
-    "build": "vite build"
+    "build": "vite build",
+    "postbuild": "echo '// @unocss-include' >> dist/tailvue.es.js; echo '// @unocss-include' >> dist/tailvue.umd.js"
   },
   "dependencies": {
     "vue": "^3.2.21"

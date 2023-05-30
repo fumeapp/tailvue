@@ -7,23 +7,9 @@ export default defineConfig({
   plugins: [
     vue(),
     UnoCSS({
-      injectReset: true,
       transformers: [
         transformerDirectives(),
       ]
     }),
-    /*
-    VitePluginWindicss({
-      config: {
-        darkMode: 'class', // or 'media' or 'class'
-        extract: {
-          include: [
-            'src/**.{vue,ts}',
-            '../src/**.{vue,ts}',
-          ],
-        }
-      }
-    }),
-    */
   ],
 })

@@ -17,7 +17,7 @@ const toggling = () => toggleDark()
         <div class="flex items-center">
           <Icon icon="logos-vue" class="w-8 h-8" />
           <Icon icon="mdi-plus" class="w-8 h-8" />
-          <img src="https://avatars.githubusercontent.com/u/79109951?s=200&v=4" class="w-8 h-8" alt="windicss logo">
+          <img src="https://avatars.githubusercontent.com/u/93899228?s=200&v=4" class="w-8 h-8" alt="unocss logo">
           <div class="w-0.5 h-8 bg-gray-600 dark:bg-gray-300 mx-2" />
           <Icon icon="logos-tailwindcss-icon" class="w-8 h-8" />
         </div>
