@@ -1,3 +1,15 @@
+<script lang="ts" setup>
+import { Icon } from '@iconify/vue'
+import Buttons from './buttons.vue'
+import Modals from './modals.vue'
+import Toasts from './toasts.vue'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+const toggling = () => toggleDark()
+</script>
+
 <template>
   <nav class="bg-gray-200 dark:bg-gray-700">
     <div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -5,11 +17,14 @@
         <div class="flex items-center">
           <Icon icon="logos-vue" class="w-8 h-8" />
           <Icon icon="mdi-plus" class="w-8 h-8" />
-          <img src="https://avatars.githubusercontent.com/u/79109951?s=200&v=4" class="w-8 h-8" alt="windicss logo">
+          <img src="https://avatars.githubusercontent.com/u/93899228?s=200&v=4" class="w-8 h-8" alt="unocss logo">
           <div class="w-0.5 h-8 bg-gray-600 dark:bg-gray-300 mx-2" />
           <Icon icon="logos-tailwindcss-icon" class="w-8 h-8" />
         </div>
-        <button @click="toggleDark" class="text-gray-800 dark:text-white w-8 h-8 flex items-center justify-center rounded-full">
+        <button
+          @click="toggling"
+          class="text-gray-800 dark:text-white w-8 h-8 flex items-center justify-center rounded-full"
+        >
           <icon icon="carbon-moon" v-if="isDark" class="w-6 h-6" />
           <icon icon="carbon-sun" v-else class="w-6 h-6" />
         </button>
@@ -34,17 +49,6 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup>
-import { Icon } from '@iconify/vue'
-import Buttons from './buttons.vue'
-import Modals from './modals.vue'
-import Toasts from './toasts.vue'
-import PushButton from '../../src/PushButton.vue'
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-</script>
 
 <style>
 html, body {

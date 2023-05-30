@@ -10,6 +10,7 @@
     "vue",
     "vue-plugin",
     "tailwindcss",
+    "unocss",
     "windicss",
     "nuxt-module",
     "nuxt",

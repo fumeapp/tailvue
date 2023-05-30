@@ -1,7 +1,7 @@
 {
   "name": "tailvue",
   "version": "0.1.68",
-  "description": "windicss and tailwindcss components for Vue",
+  "description": "windicss, tailwindcss and unocss components for Vue",
   "repository": "https://github.com/fumeapp/tailvue",
   "author": "Kevin Olson",
   "license": "MIT",
@@ -31,7 +31,8 @@
   },
   "scripts": {
     "dev": "vite playground",
-    "build": "vite build"
+    "build": "vite build",
+    "postbuild": "echo '// @unocss-include' >> dist/tailvue.es.js; echo '// @unocss-include' >> dist/tailvue.umd.js"
   },
   "dependencies": {
     "vue": "^3.2.21"
@@ -42,15 +43,17 @@
   "devDependencies": {
     "@iconify/vue": "^3.1.0",
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
-    "@types/node": "^17.0.18",
+    "@types/node": "^20.2.5",
+    "@unocss/transformer-directives": "^0.52.4",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/compiler-sfc": "^3.2.11",
-    "@vueuse/core": "^6.9.1",
+    "@vueuse/core": "^10.1.2",
     "esbuild": "0.14.32",
     "simple-syntax-highlighter": "^2.2.0",
     "tsup": "^5.7.0",
     "unbuild": "^0.6.9",
-    "vite": "~3.1.7",
+    "unocss": "^0.52.4",
+    "vite": "~4.3.9",
     "vite-plugin-windicss": "^1.5.1",
     "windicss": "^3.2.1"
   },

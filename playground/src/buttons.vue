@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import PushButton from '../../src/PushButton.vue'
+</script>
+
 <template>
   <push-button>
     simple button
@@ -27,6 +31,3 @@
     <push-button theme="white-right"> white-right </push-button>
   </div>
 </template>
-<script lang="ts" setup>
-import PushButton from '../../src/PushButton.vue'
-</script>

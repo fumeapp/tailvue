@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/fumeapp/tailvue/main/media/logo.png" width="300" alt="tailvue">
   <br />
-  Vue components built for Vue3 powered by Windi CSS or tailwindcss
+  Vue components built for Vue3 powered by Uno CSS or tailwindcss
 </p>
 
 ## 🚀 Features
@@ -97,9 +97,9 @@ const $modal = useModal()
 yarn add --dev @iconify/vue
 ```
 
-### WindiCSS
-* Install [WindiCSS](https://windicss.org/)
-* Add the following to your `window.config.ts`
+### UnoCSS
+* Install [UnoCSS](https://unocss.dev/)
+* Add the following to your `uno.config.ts`
 ```ts
 export default defineConfig({
   extract: {
