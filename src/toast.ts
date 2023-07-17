@@ -18,7 +18,6 @@ const elClasses = ['w-full', 'max-w-sm', 'mt-4']
 export function useToast(): TailvueToast {
   const outer = document.createElement('div')
   outerClasses.forEach(c => outer.classList.add(c))
-  outer.setAttribute('aria-live', 'assertive')
   const inner = document.createElement('div')
   innerClasses.forEach(c => inner.classList.add(c))
   inner.setAttribute('id', 'toasts')
