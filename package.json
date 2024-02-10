@@ -26,12 +26,12 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./dist/tailvue.es.js",
-        "types": "./src/typings.d.ts"
+        "types": "./src/typings.d.ts",
+        "default": "./dist/tailvue.es.js"
       },
       "require": {
-        "default": "./dist/tailvue.umd.js",
-        "types": "./src/typings.d.ts"
+        "types": "./src/typings.d.ts",
+        "default": "./dist/tailvue.umd.js"
       }
     }
   },
