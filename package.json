@@ -25,8 +25,14 @@
   "module": "./dist/tailvue.es.js",
   "exports": {
     ".": {
-      "import": "./dist/tailvue.es.js",
-      "require": "./dist/tailvue.umd.js"
+      "import": {
+        "types": "./src/typings.d.ts",
+        "default": "./dist/tailvue.es.js"
+      },
+      "require": {
+        "types": "./src/typings.d.ts",
+        "default": "./dist/tailvue.umd.js"
+      }
     }
   },
   "scripts": {
